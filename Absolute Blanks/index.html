@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absolute Blanks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="app-header">
+      <h1 class="logo">ABSOLUTE<br><span>BLANKS</span></h1>
+      <p class="tagline">The Pass-&-Play Fill-in-the-Story Game</p>
+    </header>
+
+<!-- SCREEN 1: Setup & Scenario Selection -->
+<section id="screen-setup" class="screen active">
+  <div class="card">
+    <h2>1. Scenario</h2>
+    <div class="random-scenario-box">
+      <h3 id="scenario-title" class="scenario-title-display">Loading...</h3>
+      <p id="scenario-desc" class="scenario-description">Loading description...</p>
+    </div>
+    <button type="button" id="btn-shuffle-scenario" class="btn btn-secondary">🎲 Shuffle Scenario</button>
+  </div>
+
+  <div class="card">
+    <h2>2. Number of Players</h2>
+    <div class="option-grid">
+      <button type="button" class="btn-option btn-count" data-count="1">1</button>
+      <button type="button" class="btn-option btn-count active" data-count="2">2</button>
+      <button type="button" class="btn-option btn-count" data-count="3">3</button>
+      <button type="button" class="btn-option btn-count" data-count="4">4</button>
+      <button type="button" class="btn-option btn-count" data-count="5">5</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3. Story Length</h2>
+    <div class="option-grid">
+      <button type="button" class="btn-option btn-length active" data-length="3">Standard (3 Acts)</button>
+      <button type="button" class="btn-option btn-length" data-length="6">Epic (6 Acts)</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4. Players & Pronouns</h2>
+    <div id="player-inputs-container" class="player-setup-list"></div>
+  </div>
+
+  <button id="btn-start-game" class="btn btn-primary btn-large">Start Story!</button>
+</section>
+
+    <!-- SCREEN 2: Pass Phone Transition -->
+    <section id="screen-pass" class="screen">
+      <div class="card card-center">
+        <div class="icon-pass">📱🔒</div>
+        <h2 id="pass-title">Pass the Phone</h2>
+        <p id="pass-instruction">Hand the phone secretly to <strong>Player 1</strong>.</p>
+        <button id="btn-ready" class="btn btn-accent btn-large">I'm Ready!</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: Input Form for Blanks -->
+    <section id="screen-input" class="screen">
+      <div class="card">
+        <div class="turn-badge" id="player-turn-badge">Player 1's Turn</div>
+        <h2 id="current-act-title">Act I</h2>
+        <p class="instructional-text">Fill in the blanks below (or hit 🎲 if stuck!):</p>
+        
+        <div id="blanks-container" class="blanks-form"></div>
+
+        <button id="btn-submit-turn" class="btn btn-primary btn-large">Done & Pass ➡️</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 4: Reveal Phase Controls (Colors Swapped: Prev = Red, Next = Green) -->
+<section id="screen-reveal" class="screen">
+  <div class="card card-reveal">
+    <div class="reveal-badge" id="reveal-act-badge">Act I</div>
+    <h2 id="reveal-act-title" class="act-heading">Title</h2>
+    
+    <div class="story-output-box">
+      <p id="reveal-act-text" class="story-text"></p>
+    </div>
+
+    <div class="reveal-controls">
+      <button id="btn-prev-act" class="btn btn-primary">⬅️ Prev Act</button>
+      <button id="btn-next-act" class="btn btn-secondary">Next Act ➡️</button>
+    </div>
+  </div>
+
+  <button id="btn-play-again" class="btn btn-accent btn-large hidden">Play Again</button>
+</section>
+
+  <script src="app.js"></script>
+</body>
+</html>

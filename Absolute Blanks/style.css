@@ -1,0 +1,350 @@
+:root {
+  --bg-color: #fdf6e2;
+  --card-bg: #ffffff;
+  --primary: #ff4757;        /* Coral Red for Prev Act */
+  --secondary: #2ed573;      /* Vibrant Green for Next Act */
+  --accent: #ffa502;         /* Comic Yellow */
+  --dark: #2f3542;
+  --light: #f1f2f6;
+  --border-color: #2f3542;
+  --shadow: 4px 4px 0px var(--border-color);
+}
+
+/* Option Grid Layout for Players and Story Length */
+.option-grid {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.btn-option {
+  flex: 1;
+  padding: 12px 8px;
+  border: 3px solid var(--border-color);
+  background: var(--light);
+  font-size: 0.95rem;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 2px 2px 0px var(--border-color);
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.btn-option.active {
+  background: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.btn-option:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--border-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* CRISP FONT FIX: Use sharp sans-serif font for general UI */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--dark);
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  min-height: 100vh;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* App Header */
+.app-header {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.logo {
+  /* Keep Impact strictly for main header logo */
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 2.5rem;
+  line-height: 0.9;
+  color: var(--primary);
+  text-shadow: 2px 2px 0px var(--dark);
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.tagline {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 6px;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 3px solid var(--border-color);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-center {
+  text-align: center;
+  padding: 32px 18px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Screens Visibility */
+.screen {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Buttons */
+.btn {
+  border: 3px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  text-align: center;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--border-color);
+}
+
+/* Color Classes Swapped for Controls */
+.btn-primary { 
+  background-color: var(--primary); 
+  color: white; 
+}
+
+.btn-secondary { 
+  background-color: var(--secondary); 
+  color: white; 
+}
+
+.btn-accent { 
+  background-color: var(--accent); 
+  color: var(--dark); 
+}
+
+.btn-large {
+  font-size: 1.25rem;
+  padding: 16px;
+  width: 100%;
+}
+
+/* Player Selector Buttons */
+.player-count-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-count {
+  flex: 1;
+  padding: 10px;
+  border: 3px solid var(--border-color);
+  background: var(--light);
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-count.active {
+  background: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+/* Player Setup List */
+.player-setup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.player-row input {
+  flex: 2;
+}
+
+.player-row select {
+  flex: 1.2;
+}
+
+/* Forms & Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-control {
+  border: 3px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #fff;
+}
+
+.scenario-description {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Dynamic Blanks UI */
+.blank-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.blank-label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.input-with-panic {
+  display: flex;
+  gap: 6px;
+}
+
+.input-with-panic input {
+  flex: 1;
+}
+
+.btn-panic {
+  border: 3px solid var(--border-color);
+  background: var(--accent);
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px var(--border-color);
+}
+
+/* Badges */
+.turn-badge, .reveal-badge {
+  align-self: start;
+  background: var(--primary);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 2px solid var(--border-color);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.reveal-badge {
+  background: var(--secondary);
+}
+
+.icon-pass {
+  font-size: 3.5rem;
+  margin-bottom: 8px;
+}
+
+/* Story Output Screen */
+.card-reveal {
+  min-height: 280px;
+  justify-content: space-between;
+}
+
+.story-output-box {
+  background: #fffdf0;
+  border: 2px dashed var(--border-color);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.story-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+/* SUBTLE BLANK HIGHLIGHT: Understated underline instead of heavy color box */
+.story-text .filled-blank {
+  font-weight: 700;
+  border-bottom: 2px solid var(--primary);
+  padding: 0 2px;
+  color: #111;
+}
+
+.reveal-controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.reveal-controls button {
+  flex: 1;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Randomized Scenario Box Styling */
+.random-scenario-box {
+  background: var(--light);
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.scenario-title-display {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+}

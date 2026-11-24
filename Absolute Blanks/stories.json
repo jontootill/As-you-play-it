@@ -1,0 +1,3175 @@
+[
+  {
+    "id": "parent-teacher-conference",
+    "title": "Parent-Teacher Conference",
+    "description": "A routine catch-up turns into an absolute catastrophe.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: The Opening Remarks",
+        "template": "Thank you for coming in today. Overall, {name} has been settling in well, except for {his/her/their} habit of bringing a {absurd_object} into morning registration.",
+        "blanks": [
+          {
+            "key": "absurd_object",
+            "label": "An unusual personal item",
+            "panicSuggestions": [
+              "half-eaten sausage roll",
+              "live badger in a bow tie",
+              "rusty trombone",
+              "vintage toaster",
+              "moldy crumpet",
+              "rubber chicken named Susan",
+              "deflated space hopper",
+              "jar of pickled eggs",
+              "traffic cone",
+              "framed photo of a turnip"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Corridor Chaos",
+        "template": "Things started going downhill during morning assembly. While everyone else was sitting quietly, {name} decided to {corridor_action} right down the middle aisle while shouting '{loud_shout}'.",
+        "blanks": [
+          {
+            "key": "corridor_action",
+            "label": "A bizarre way to travel",
+            "panicSuggestions": [
+              "ride a unicycle",
+              "slide on a cafeteria tray",
+              "do high-speed commando crawls",
+              "gallop on a hobby horse",
+              "crab-walk sideways",
+              "do dramatic moonwalking",
+              "roll like a runaway log",
+              "cartwheel uncontrollably",
+              "hop on one foot backwards",
+              "pretend to be a runaway hovercraft"
+            ]
+          },
+          {
+            "key": "loud_shout",
+            "label": "A random declaration",
+            "panicSuggestions": [
+              "Make way for the cheese king!",
+              "I regret nothing!",
+              "The guinea pigs are revolting!",
+              "Beware the flying gravy!",
+              "I demand more custard!",
+              "The prophecy is unfolding!",
+              "Who hid my slipper?!",
+              "Behold my majesty!",
+              "Release the ducks!",
+              "Victory shall be mine!"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Science Lab Escalation",
+        "template": "Naturally, things peaked during Science class. When {he/she/they} were asked to open {his/her/their} textbook, {he/she/they} instead chose to {funny_action} near the Bunsen burners.",
+        "blanks": [
+          {
+            "key": "funny_action",
+            "label": "A dangerous or silly lab choice",
+            "panicSuggestions": [
+              "roast marshmallows on safety equipment",
+              "perform aggressive tap dancing",
+              "attempt to clone a potato",
+              "summon a Victorian ghost",
+              "butter the floorboards",
+              "build a fortress of safety goggles",
+              "teach karate to the lab hamster",
+              "mix gravy powder into beaker acid",
+              "try to microwave a shoe",
+              "conduct a choir of squeaky chairs"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Lunchtime Incident",
+        "template": "By lunchtime, the situation had deteriorated further. The catering staff reported that {name} attempted to trade {his/her/their} school dinner for {weird_trade}.",
+        "blanks": [
+          {
+            "key": "weird_trade",
+            "label": "Something totally inappropriate",
+            "panicSuggestions": [
+              "a handful of pocket lint",
+              "three cursed trading cards",
+              "a live pigeon",
+              "a suspiciously heavy envelope",
+              "a soggy biscuit",
+              "a fake mustache",
+              "a single shiny button",
+              "a lukewarm cup of tea",
+              "a half-knitted sock",
+              "a pet rock named Kevin"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Cover-Up",
+        "template": "When a prefect tried to intervene and restore order, {name} tried to frame {innocent_bystander} by planting {suspicious_item} in {his/her/their} pencil case.",
+        "blanks": [
+          {
+            "key": "innocent_bystander",
+            "label": "A random person or authority figure",
+            "panicSuggestions": [
+              "the Deputy Headteacher",
+              "an unsuspecting Year 7 student",
+              "the school mascot",
+              "the caretaker's cat",
+              "the visiting trumpet tutor",
+              "the dinner lady",
+              "the head librarian",
+              "a passing postal worker",
+              "the school chess champion",
+              "the IT department technician"
+            ]
+          },
+          {
+            "key": "suspicious_item",
+            "label": "A random incriminating item",
+            "panicSuggestions": [
+              "a ticking pocket watch",
+              "a half-stitched knitting project",
+              "a stolen traffic cone",
+              "a squeaky rubber duck",
+              "a jar of liquidized broccoli",
+              "a pair of oversized clown shoes",
+              "a plastic kazoo",
+              "a blueprint for a catapult",
+              "a half-eaten pork pie",
+              "a glittery tiara"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Final Verdict",
+        "template": "When the Headteacher finally stepped in, {name} simply shouted '{funny_phrase}' and escaped through the window using a {escape_tool}. Therefore, our formal recommendation is {school_punishment} for {him/her/them}.",
+        "blanks": [
+          {
+            "key": "funny_phrase",
+            "label": "A dramatic exit line",
+            "panicSuggestions": [
+              "You'll never take me alive!",
+              "The prophecy is fulfilled!",
+              "Look, a distraction!",
+              "I regret nothing!",
+              "To infinity and banana!",
+              "Tell my cat I love her!",
+              "This isn't even my final form!",
+              "May the custard be with you!",
+              "Fly, you fools!",
+              "Cheese will set us free!"
+            ]
+          },
+          {
+            "key": "escape_tool",
+            "label": "An impractical escape tool",
+            "panicSuggestions": [
+              "wet pool noodle",
+              "pair of safety scissors",
+              "pogo stick",
+              "damp tea towel",
+              "leaf blower",
+              "giant feather duster",
+              "cardboard box parachute",
+              "squeaky pogo shoe",
+              "pair of roller skates",
+              "space hopper"
+            ]
+          },
+          {
+            "key": "school_punishment",
+            "label": "An absurd school punishment",
+            "panicSuggestions": [
+              "50 hours of competitive floor-sweeping",
+              "banishment to the boiler room",
+              "cleaning the hamster cage with a toothbrush",
+              "sorting the lost property socks by smell",
+              "polishing all school doorknobs with banana peel",
+              "singing the school anthem backwards",
+              "peeling potatoes for the cafeteria until Friday",
+              "holding a boombox over their head in detention",
+              "wearing a neon donkey hat during break time",
+              "writing an essay on the history of spoons"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ofsted-inspection",
+    "title": "The Ofsted Inspection Day",
+    "description": "Inspectors arrive unexpectedly, and things immediately go off the rails.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: The Inspector Arrives",
+        "template": "The lead inspector walked into the classroom right as {name} was attempting to {inspector_action} on the main whiteboard.",
+        "blanks": [
+          {
+            "key": "inspector_action",
+            "label": "An inappropriate whiteboard activity",
+            "panicSuggestions": [
+              "draw Shrek in permanent marker",
+              "map out an alien invasion plan",
+              "calculate the velocity of a flying crisp",
+              "write a letter of resignation for the teacher",
+              "draw a giant treasure map",
+              "rank all school dinners by squidginess",
+              "doodle a battle between dinosaurs and robots",
+              "play tic-tac-toe against themselves",
+              "write a petition to ban homework forever",
+              "spell out secret Morse code messages"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Deep Dive",
+        "template": "When asked a direct question about the lesson objective, {name} stared dead into the inspector's eyes and replied, '{bizarre_response}'.",
+        "blanks": [
+          {
+            "key": "bizarre_response",
+            "label": "A completely unrelated statement",
+            "panicSuggestions": [
+              "The simulation is ending soon.",
+              "Check under your chair for a badger.",
+              "My cat ate my critical thinking skills.",
+              "I only answer to the name Captain Crunch.",
+              "The walls have ears and they like jazz.",
+              "I am legally obligated to remain silent.",
+              "Would you like to buy a secondhand sock?",
+              "The moon is made of wobbly jelly.",
+              "I hear the call of the wild turnips!",
+              "Is this going to be on the test?"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: Group Work Disaster",
+        "template": "During collaborative group work, {his/her/their} table was supposed to build a model bridge. Instead, {he/she/they} constructed a {ridiculous_model} out of {household_junk}.",
+        "blanks": [
+          {
+            "key": "ridiculous_model",
+            "label": "A bizarre structure",
+            "panicSuggestions": [
+              "shrinking ray prototype",
+              "monument to instant noodles",
+              "fortress of solitude",
+              "life-sized catapult",
+              "shrine to baked beans",
+              "robot duck replica",
+              "time machine made of cardboard",
+              "miniature bowling alley",
+              "throne fit for a hamster",
+              "haunted dollhouse"
+            ]
+          },
+          {
+            "key": "household_junk",
+            "label": "Odd building materials",
+            "panicSuggestions": [
+              "used chewing gum and paperclips",
+              "soggy cardboard and expired custard",
+              "sparkly sequins and raw bacon",
+              "sticky tape and dried spaghetti",
+              "crushed juice boxes and rubber bands",
+              "old sponges and pipe cleaners",
+              "cotton buds and mashed potatoes",
+              "lollipop sticks and stale bread",
+              "tin foil and pipe insulation",
+              "egg cartons and string"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Cafeteria Audit",
+        "template": "The inspectors decided to audit lunchtime next. They watched in horror as {name} traded {his/her/their} blazer for a {weird_item} from the kitchen staff.",
+        "blanks": [
+          {
+            "key": "weird_item",
+            "label": "An absurd cafeteria item",
+            "panicSuggestions": [
+              "giant wooden ladle",
+              "bucket of lukewarm gravy",
+              "mysterious casserole dish",
+              "tray of cold fish fingers",
+              "sack of raw onions",
+              "giant tub of strawberry jelly",
+              "hairnet signed by the chef",
+              "vintage milk crate",
+              "colander used as a helmet",
+              "single massive jacket potato"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Fire Alarm Incident",
+        "template": "To test emergency procedures, {name} took matters into {his/her/their} own hands and activated the alarm by throwing a {flying_object} across the hall.",
+        "blanks": [
+          {
+            "key": "flying_object",
+            "label": "An unexpected projectile",
+            "panicSuggestions": [
+              "heavy geography atlas",
+              "glitter-covered sneaker",
+              "frozen turkey",
+              "plastic flamingo",
+              "roll of bubble wrap",
+              "soggy dodgeball",
+              "stuffed turnip toy",
+              "cereal box",
+              "slipper",
+              "giant foam finger"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Final Report",
+        "template": "In the final debrief, the lead inspector wrote: 'The school has exceptional spirit, but {name} must immediately cease {final_prohibition}.'",
+        "blanks": [
+          {
+            "key": "final_prohibition",
+            "label": "An absurd prohibition",
+            "panicSuggestions": [
+              "summoning entities during period 3",
+              "smuggling livestock into assembly",
+              "negotiating peace treaties with pigeons",
+              "charging money for fake hall passes",
+              "organizing underground thumb-wrestling rings",
+              "using gravy as whiteboard cleaner",
+              "wearing a wizard cape to PE",
+              "storing hamsters in the teacher's desk",
+              "playing bagpipes in the quiet area",
+              "replacing the clock hands with sausages"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "school-trip-disaster",
+    "title": "The School Trip Disaster",
+    "description": "An educational day out to a historic castle goes wildly off-script.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Boarding the Bus",
+        "template": "Before the coach even left the school gates, {name} caused a panic by attempting to pack a {bus_item} into {his/her/their} lunchbox.",
+        "blanks": [
+          {
+            "key": "bus_item",
+            "label": "An oversized or absurd item",
+            "panicSuggestions": [
+              "full-sized garden gnome",
+              "bag of live goldfish",
+              "potted fern",
+              "bowling ball",
+              "waffle maker",
+              "giant stuffed bear",
+              "traffic cone",
+              "squeaky saxophone",
+              "pair of swim fins",
+              "toaster oven"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Journey",
+        "template": "Halfway down the motorway, the driver had to pull over because {name} kept playing {annoying_sound} through the coach intercom.",
+        "blanks": [
+          {
+            "key": "annoying_sound",
+            "label": "A disruptive noise or song",
+            "panicSuggestions": [
+              "the duck quack sound effect",
+              "a recorder solo played out of tune",
+              "whale mating calls",
+              "aggressive Yodel music",
+              "uncontrolled kazoo buzzing",
+              "foghorn sound effects",
+              "dramatic opera singing",
+              "squeaky shoe sounds on loop",
+              "a beatbox loop",
+              "chicken clucking noises"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Castle Tour",
+        "template": "Upon arriving at the castle, the tour guide was horrified when {name} climbed into a historic suit of armor and began to {armor_action}.",
+        "blanks": [
+          {
+            "key": "armor_action",
+            "label": "A silly action in armor",
+            "panicSuggestions": [
+              "do the Macarena",
+              "challenge a tourist to a duel",
+              "demand a knightly feast",
+              "sing heavy metal classics",
+              "sell fake castle souvenirs",
+              "pretend to be a statue",
+              "do push-ups very noisily",
+              "recite Shakespeare terribly",
+              "do a robot dance",
+              "ask for a modern Wi-Fi password"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Gift Shop Frenzy",
+        "template": "In the gift shop, instead of buying a postcard, {name} spent all {his/her/their} pocket money on {weird_gift}.",
+        "blanks": [
+          {
+            "key": "weird_gift",
+            "label": "A ridiculous gift shop purchase",
+            "panicSuggestions": [
+              "14 wooden swords",
+              "a replica medieval helmet made of plastic",
+              "a giant tub of fudge",
+              "a bag of shiny pebbles",
+              "a squeaky rubber raven",
+              "a fake jousting lance",
+              "30 souvenir erasers",
+              "a medieval knight catapult kit",
+              "a velvet wizard hat",
+              "a jar of mock dragon scales"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Moat Incident",
+        "template": "During the outdoor picnic, {name} dropped {his/her/their} sandwich into the moat and tried to fish it out using {fishing_tool}.",
+        "blanks": [
+          {
+            "key": "fishing_tool",
+            "label": "An absurd fishing tool",
+            "panicSuggestions": [
+              "a plastic selfie stick",
+              "a pair of linked sausages",
+              "a bent coat hanger",
+              "a long stick with chewing gum on the end",
+              "a cricket bat",
+              "a tied-together string of shoelaces",
+              "a toy lasso",
+              "a rolled-up raincoat",
+              "a broom borrowed from a guard",
+              "a plastic rake"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Journey Home",
+        "template": "On the way back, the head teacher banned {name} from future trips after finding {trophy_item} hidden inside {his/her/their} backpack.",
+        "blanks": [
+          {
+            "key": "trophy_item",
+            "label": "An absurd stolen/found artifact",
+            "panicSuggestions": [
+              "a medieval catapult stone",
+              "the castle curator's hat",
+              "a stuffed owl from the display",
+              "a giant wooden shield",
+              "a bag of moat water",
+              "a historical feather quill",
+              "a plastic replica crown",
+              "a velvet rope barrier",
+              "a 'Do Not Touch' sign",
+              "a jar of castle dungeon dirt"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "holiday-road-trip",
+    "title": "The Holiday Road Trip",
+    "description": "A relaxing family road trip turns into a highway nightmare.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Packing the Car",
+        "template": "Before we even backed out of the driveway, {name} caused a scene by insisting we strap a {car_item} to the roof of the car.",
+        "blanks": [
+          {
+            "key": "car_item",
+            "label": "An oversized or unnecessary item",
+            "panicSuggestions": [
+              "full-sized inflatable flamingo",
+              "vintage washing machine",
+              "potted oak tree",
+              "giant stuffed giraffe",
+              "squeaky exercise bike",
+              "life-sized cardboard cutout of Shrek",
+              "trampoline frame",
+              "wooden grandfather clock",
+              "set of garden gnomes",
+              "barrel of salted pretzels"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Motorway Games",
+        "template": "To pass the time on the motorway, {name} invented a road trip game where everyone had to {road_game} every time we passed a petrol station.",
+        "blanks": [
+          {
+            "key": "road_game",
+            "label": "A bizarre car game action",
+            "panicSuggestions": [
+              "quack like a dramatic duck",
+              "salute the lorry drivers while wearing a mustache",
+              "sing the chorus of 'YMCA' backwards",
+              "do a quick seated tap dance",
+              "make high-pitched foghorn sounds",
+              "shout 'The aliens are here!'",
+              "pretend to be a malfunctioning robot",
+              "wave a pair of socks out the window",
+              "recite the alphabet in a pirate voice",
+              "gasp loudly like a Victorian lord"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Service Station Stop",
+        "template": "At the motorway services, {name} got lost for 45 minutes and was eventually found near the arcade trying to win a {service_prize} using a {odd_tool}.",
+        "blanks": [
+          {
+            "key": "service_prize",
+            "label": "A strange prize",
+            "panicSuggestions": [
+              "giant plush avocado",
+              "pair of neon sunglasses",
+              "squeaky rubber chicken",
+              "tiny plastic kazoo",
+              "glittery unicorn key ring",
+              "bag of stale gummy worms",
+              "fake mustache set",
+              "toy water pistol",
+              "fuzzy pair of dice",
+              "miniature bowling pin"
+            ]
+          },
+          {
+            "key": "odd_tool",
+            "label": "An unhelpful tool",
+            "panicSuggestions": [
+              "pair of barbecue tongs",
+              "bent coat hanger",
+              "plastic selfie stick",
+              "soggy pool noodle",
+              "strands of cooked spaghetti",
+              "cricket bat",
+              "chewed pencil",
+              "feather duster",
+              "pair of safety goggles",
+              "rolled-up magazine"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: Navigation Nightmare",
+        "template": "When the Sat-Nav stopped working, {name} took over navigation and ended up directing the car straight into a {wrong_location}.",
+        "blanks": [
+          {
+            "key": "wrong_location",
+            "label": "A wrong destination",
+            "panicSuggestions": [
+              "farmer's muddy turnip patch",
+              "local duck pond",
+              "drive-thru car wash while the windows were down",
+              "crowded campsite for caravans",
+              "miniature golf course fairway",
+              "flock of very confused sheep",
+              "pedestrianized shopping high street",
+              "construction zone full of wet cement",
+              "fire station training driveway",
+              "private maze of hedges"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Car Breakdown",
+        "template": "When the engine started smoking, {name} popped the bonnet and tried to fix the engine using nothing but {fix_item}.",
+        "blanks": [
+          {
+            "key": "fix_item",
+            "label": "A useless emergency repair tool",
+            "panicSuggestions": [
+              "a stick of melted butter",
+              "three rolls of gaffer tape and a prayer",
+              "a half-eaten packet of crisps",
+              "a tube of glitter glue",
+              "a bottle of sparkling lemonade",
+              "a spare woolly hat",
+              "a plastic spatula",
+              "a handful of wet moss",
+              "a squeaky dog toy",
+              "a shiny foil blanket"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: Arrival at the Hotel",
+        "template": "When we finally made it to the holiday hotel, {name} checked in at reception while wearing a {hotel_outfit} and demanding a room with a view of {weird_view}.",
+        "blanks": [
+          {
+            "key": "hotel_outfit",
+            "label": "A ridiculous outfit",
+            "panicSuggestions": [
+              "full suit of plastic armor",
+              "pair of neon flippers and a snorkel",
+              "dramatic velvet cape",
+              "bright yellow raincoat indoors",
+              "onesie shaped like a dinosaur",
+              "sparkly sombrero",
+              "tutu over sweatpants",
+              "chef's tall hat and apron",
+              "pirate costume",
+              "wizard robe"
+            ]
+          },
+          {
+            "key": "weird_view",
+            "label": "An absurd window view",
+            "panicSuggestions": [
+              "the hotel dumpster area",
+              "a giant statue of a sausage",
+              "the local pigeon roosting ledge",
+              "a neighbor's clothesline full of socks",
+              "the kitchen dishwasher exhaust vent",
+              "a brick wall painted with a smiley face",
+              "a goat sanctuary",
+              "the hotel swimming pool boiler room",
+              "a hedge shaped like a hedgehog",
+              "a busy round-about"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shopping-trip-fiasco",
+    "title": "The High Street Shopping Trip",
+    "description": "A quiet trip to the shopping center descends into retail madness.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Entering the Mall",
+        "template": "As soon as we stepped into the shopping center, {name} grabbed a trolley and started racing down the concourse while wearing a {shopping_outfit}.",
+        "blanks": [
+          {
+            "key": "shopping_outfit",
+            "label": "A strange shopping accessory",
+            "panicSuggestions": [
+              "high-visibility hi-vis vest",
+              "pair of oversized ski goggles",
+              "disguise mask with a fake nose",
+              "giant foam finger",
+              "feather boa",
+              "glittery tiara",
+              "pair of bunny ears",
+              "dramatic superhero mask",
+              "pair of fake vampire fangs",
+              "chef's apron"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Clothes Shop",
+        "template": "In the department store, {name} emerged from the changing room wearing a outfit made entirely of {fashion_disaster} and asked if it looked suitable for a royal garden party.",
+        "blanks": [
+          {
+            "key": "fashion_disaster",
+            "label": "An absurd material",
+            "panicSuggestions": [
+              "neon green spandex and bubble wrap",
+              "clashing tartan kilts",
+              "denim jackets stitched together",
+              "fleece blankets with armholes",
+              "bright yellow waterproof overalls",
+              "sequined waistcoats",
+              "patterned sofa cushion covers",
+              "oversized winter scarves wrapped like a mummy",
+              "plastic poncho draped like a toga",
+              "matching tracksuit made of velvet"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Shoe Department",
+        "template": "While testing a pair of shoes, {name} decided to demonstrate their durability by performing {shoe_test} right in front of the shop manager.",
+        "blanks": [
+          {
+            "key": "shoe_test",
+            "label": "A ridiculous physical activity",
+            "panicSuggestions": [
+              "high-speed aggressive tap dancing",
+              "a series of energetic star jumps",
+              "a dramatic hurdle leap over a display stool",
+              "a salsa dance routine",
+              "a lunging sword-fight sequence",
+              "a series of backward rolls",
+              "a moonwalk across the carpet",
+              "an energetic hopscotch routine",
+              "a slow-motion sprint",
+              "a competitive limbo attempt"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Food Court",
+        "template": "At the food court, {name} caused an uproar by trying to pay for a tray of burgers using {weird_currency}.",
+        "blanks": [
+          {
+            "key": "weird_currency",
+            "label": "An invalid currency",
+            "panicSuggestions": [
+              "a collection of shiny sea shells",
+              "three expired store coupons from 1998",
+              "a pocket full of shiny buttons",
+              "a hand-drawn promissory note on a napkin",
+              "a handful of marbles",
+              "two plastic arcade tokens",
+              "a rubber duck",
+              "a packet of vegetable seeds",
+              "a autographed photo of a hamster",
+              "a single shiny pebble"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: Security Intervenes",
+        "template": "Mall security intervened when {name} accidentally set off the store alarms by walking out while holding a {mall_item}.",
+        "blanks": [
+          {
+            "key": "mall_item",
+            "label": "A bizarre stolen item",
+            "panicSuggestions": [
+              "full-sized mannequin wearing a wig",
+              "display rack full of brightly coloured socks",
+              "giant decorative plastic palm tree",
+              "potted fern from the food court",
+              "life-sized cardboard poster of a celebrity",
+              "giant teddy bear higher than a door",
+              "store speaker system microphone",
+              "shopping trolley full of toilet paper",
+              "decorative fountain statue",
+              "display case full of plastic sunglasses"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: Banned from the Mall",
+        "template": "We were politely escorted to the exit, where the mall manager declared that {name} was officially banned from the shopping center until {his/her/they} apologized to {store_apology}.",
+        "blanks": [
+          {
+            "key": "store_apology",
+            "label": "An unusual figure to apologize to",
+            "panicSuggestions": [
+              "the mannequin in window 3",
+              "the food court janitor",
+              "the mall mascot duck",
+              "the security officer's golden retriever",
+              "the automated perfume sprayer",
+              "the manager of the candle shop",
+              "the escalator maintenance crew",
+              "the barista at the coffee stand",
+              "the decorative plastic parrot",
+              "the coin-operated ride horse"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "visiting-family",
+    "title": "Visiting the In-Laws",
+    "description": "A quiet Sunday family visit gets completely out of hand.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Arriving at the House",
+        "template": "When we knocked on the front door, {name} greeted the relatives while wearing a {arrival_gift} around {his/her/their} neck.",
+        "blanks": [
+          {
+            "key": "arrival_gift",
+            "label": "An inappropriate neck accessory",
+            "panicSuggestions": [
+              "string of raw sausages",
+              "dramatic velvet cape",
+              "garland made of broccoli florets",
+              "garland of toilet paper",
+              "giant inflatable doughnut",
+              "wreath of plastic flowers",
+              "squeaky rubber chicken",
+              "pair of binoculars",
+              "heavy medal for floor-sweeping",
+              "feather duster"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: Tea and Biscuits",
+        "template": "During afternoon tea, {name} shocked everyone by dunking {his/her/their} biscuit into {tea_liquid} instead of tea.",
+        "blanks": [
+          {
+            "key": "tea_liquid",
+            "label": "An unpleasant dunking liquid",
+            "panicSuggestions": [
+              "a bowl of cold gravy",
+              "a cup of tomato soup",
+              "a glass of sparkling lemonade",
+              "a jar of pickle juice",
+              "a bowl of melted ice cream",
+              "a mug of lukewarm custard",
+              "a dish of soy sauce",
+              "a bowl of apple cider vinegar",
+              "a cup of black coffee with five sugars",
+              "a glass of orange juice with pulp"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: Showing Off Photos",
+        "template": "While looking through family photo albums, {name} insisted on showing everyone 45 consecutive photos of {photo_subject}.",
+        "blanks": [
+          {
+            "key": "photo_subject",
+            "label": "A bizarre photograph subject",
+            "panicSuggestions": [
+              "a collection of unusual-shaped potatoes",
+              "neighbor's cat sleeping on different cars",
+              "burned pieces of toast that look like celebrities",
+              "different types of round rocks found in the garden",
+              "pigeons wearing bread crusts",
+              "collection of oddly shaped clouds",
+              "close-ups of carpet patterns",
+              "various socks missing their pairs",
+              "vegetables that look like faces",
+              "different traffic cones around town"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Garden Tour",
+        "template": "In the back garden, {name} tried to impress the relatives by attempting to {garden_feat} over the prize rose bushes.",
+        "blanks": [
+          {
+            "key": "garden_feat",
+            "label": "A dangerous garden activity",
+            "panicSuggestions": [
+              "do a dramatic backflip",
+              "pogo-stick sideways",
+              "ride a child's tricycle",
+              "cartwheel wildly",
+              "vault using a broom handle",
+              "hop backwards on one foot",
+              "perform a high-speed high kick",
+              "slide across the grass on a tray",
+              "leap like a hurdles runner",
+              "walk on hands"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Living Room Debate",
+        "template": "During a political debate in the living room, {name} settled the argument by loudly reciting {debate_script}.",
+        "blanks": [
+          {
+            "key": "debate_script",
+            "label": "An unexpected text or monologue",
+            "panicSuggestions": [
+              "the lyrics to the Macarena",
+              "the ingredients on a cereal box",
+              "a dramatic Shakespeare monologue in a funny voice",
+              "the rules of competitive thumb wrestling",
+              "a poem dedicated to mashed potatoes",
+              "the theme song from a 90s cartoon",
+              "a speech about the history of the fork",
+              "the assembly instructions for an IKEA shelf",
+              "a list of all dinosaur names from memory",
+              "a dramatic nursery rhyme"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Farewell",
+        "template": "As we were leaving, {name} accidentally packed {stolen_item} into {his/her/their} coat pocket instead of {his/her/their} car keys.",
+        "blanks": [
+          {
+            "key": "stolen_item",
+            "label": "A bizarre household object",
+            "panicSuggestions": [
+              "the living room TV remote control",
+              "a decorative porcelain cat statue",
+              "the host's favorite tea cozy",
+              "a framed photo of an uncle",
+              "the butter dish lid",
+              "a pair of floral oven gloves",
+              "a silver-plated gravy boat",
+              "the cuckoo from the wall clock",
+              "a giant garden gnome",
+              "the living room couch cushion"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "office-workday",
+    "title": "A Day at the Office",
+    "description": "An ordinary day at work becomes an extraordinary corporate disaster.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Arriving at the Desk",
+        "template": "When {name} arrived at the office, {he/she/they} customized {his/her/their} desk by installing a {desk_accessory}.",
+        "blanks": [
+          {
+            "key": "desk_accessory",
+            "label": "An absurd office modification",
+            "panicSuggestions": [
+              "miniature water fountain with floating plastic ducks",
+              "full-sized hammock tied between filing cabinets",
+              "disco ball with flashing multi-colored lights",
+              "small inflatable paddling pool under the desk",
+              "squeaky foot pedal keyboard",
+              "shrine dedicated to instant coffee",
+              "bubble machine that went off every 5 minutes",
+              "set of velvet red curtains around the monitor",
+              "life-sized mannequin sitting in the spare chair",
+              "turf of real grass for a footrest"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Morning Meeting",
+        "template": "During the 9 AM team presentation, {name} delivered a 10-minute slide show about {presentation_topic}.",
+        "blanks": [
+          {
+            "key": "presentation_topic",
+            "label": "A bizarre presentation topic",
+            "panicSuggestions": [
+              "why pigeons are secretly government drones",
+              "the top 10 worst biscuit dunking strategies",
+              "how to survive a rogue lawnmower attack",
+              "a ranking of all office staplers by personality",
+              "the secret history of the paperclip",
+              "why we should all replace chairs with space hoppers",
+              "a proposal to make Tuesday mandatory hat day",
+              "the physics of flying tea bags",
+              "how to communicate using only kazoo sounds",
+              "why socks disappear in the wash"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Office Kitchen",
+        "template": "In the staff kitchen, {name} caused a scene by accusing a colleague of stealing {his/her/their} labeled container of {stolen_food}.",
+        "blanks": [
+          {
+            "key": "stolen_food",
+            "label": "An unappealing labeled food item",
+            "panicSuggestions": [
+              "pureed Brussels sprout smoothie",
+              "cold leftover gravy with boba pearls",
+              "jar of pickled walnuts from 2012",
+              "sandwich filled entirely with mustard",
+              "single cold sausage wrapped in foil",
+              "container of lukewarm porridge with baked beans",
+              "slice of toast with mushy peas",
+              "bowl of soggy cornflakes in apple juice",
+              "container of leftover garlic mash",
+              "bag of raw turnips"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Printer Jam",
+        "template": "When the main office printer jammed, {name} attempted to fix it by inserting a {printer_tool} into the paper tray.",
+        "blanks": [
+          {
+            "key": "printer_tool",
+            "label": "A unhelpful tool",
+            "panicSuggestions": [
+              "plastic butter knife",
+              "wooden ruler coated in glue",
+              "pair of barbecue tongs",
+              "knitting needle",
+              "squeaky rubber duck",
+              "soggy tea bag",
+              "rolled-up comic book",
+              "banana peel",
+              "feather duster",
+              "pair of tweezers"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Client Call",
+        "template": "On an important video call with key clients, {name} forgot {his/her/their} microphone was on while {he/she/they} was loudly {call_blunder}.",
+        "blanks": [
+          {
+            "key": "call_blunder",
+            "label": "An embarrassing background action",
+            "panicSuggestions": [
+              "singing opera to the office microwave",
+              "arguing with a toaster",
+              "practicing a dramatic evil laugh",
+              "crunching through a bag of celery sticks",
+              "coaching a spider on how to build a web",
+              "reciting nursery rhymes in a deep voice",
+              "beatboxing terribly",
+              "practicing karate chop sounds",
+              "explaining the plot of Shrek to a pot plant",
+              "humming the theme to Jurassic Park"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: Clocking Out",
+        "template": "At 5 PM, HR handed {name} an official letter requesting that {he/she/they} refrain from {hr_warning} during work hours.",
+        "blanks": [
+          {
+            "key": "hr_warning",
+            "label": "An absurd HR restriction",
+            "panicSuggestions": [
+              "challenging clients to arm-wrestling matches",
+              "wearing a superhero cape on Fridays",
+              "using a megaphone for internal calls",
+              "replacing office chairs with beanbags",
+              "holding thumb-wrestling tournaments in the lift",
+              "decorating the CEO's office with sticky notes",
+              "bringing live poultry to team meetings",
+              "using gravy as ink in the fountain pens",
+              "playing bagpipes during coffee breaks",
+              "challenging the boss to a duel with rolled-up memos"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "playcentre-party",
+    "title": "The Playcentre Birthday Party",
+    "description": "A children's party at a soft play center turns into complete, chaotic anarchy.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Entering the Playframe",
+        "template": "Upon arriving at the soft play center, {name} ignored the age limits and dove headfirst into the ball pit while wearing {party_wear}.",
+        "blanks": [
+          {
+            "key": "party_wear",
+            "label": "Inappropriate soft play attire",
+            "panicSuggestions": [
+              "a tuxedo with tails",
+              "bright yellow rubber boots",
+              "a full inflatable sumo suit",
+              "dramatic velvet cloak",
+              "a mascot suit shaped like a giant banana",
+              "a sequined ballgown",
+              "a pair of flippers and a snorkel",
+              "a knight's shining suit of armor",
+              "neon sweatbands and leg warmers",
+              "a chef's apron and tall hat"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Mega Slide",
+        "template": "At the top of the giant vertical slide, {name} created a traffic jam by refusing to slide down until everyone cheered for {his/her/their} {slide_excuse}.",
+        "blanks": [
+          {
+            "key": "slide_excuse",
+            "label": "A bizarre accomplishment",
+            "panicSuggestions": [
+              "world-record floor-sweeping skills",
+              "mastery of the kazoo",
+              "ability to wiggle their ears",
+              "impression of a rusty door hinge",
+              "collection of shiny buttons",
+              "dramatic poetry reading",
+              "champion thumb-wrestling record",
+              "ability to balance a spoon on their nose",
+              "salsa dancing moves",
+              "fancy sock collection"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: Party Food Time",
+        "template": "When the children sat down for party food, {name} tried to hoard all the party plates by building a tower made of {party_food}.",
+        "blanks": [
+          {
+            "key": "party_food",
+            "label": "Unstable party food items",
+            "panicSuggestions": [
+              "cocktail sausages and pineapple cubes",
+              "soggy cucumber sandwiches",
+              "mini sausage rolls",
+              "bright red jelly cubes",
+              "cheese puffs stacked precariously",
+              "fish fingers",
+              "slices of pepperoni pizza",
+              "iced party ring biscuits",
+              "carrot sticks stuck together with hummus",
+              "raisin boxes"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: Pass the Parcel",
+        "template": "During Pass the Parcel, {name} refused to pass the package along when the music stopped, shouting that the middle layer contained {parcel_prize}.",
+        "blanks": [
+          {
+            "key": "parcel_prize",
+            "label": "An absurd parcel prize",
+            "panicSuggestions": [
+              "the secret to eternal youth",
+              "a single stale potato crisp",
+              "a golden key to the boiler room",
+              "a live hamster named Barnaby",
+              "a voucher for 100 free bouncy castle jumps",
+              "a signed photo of a turnip",
+              "a magical glowing pebble",
+              "a pair of mismatched socks",
+              "a jar of pickled onions",
+              "a tiny plastic trophy for 'Best Sitting'"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: Piñata Madness",
+        "template": "When it was time to hit the piñata, {name} swung the stick wildly and accidentally hit {pinata_target} instead of the papier-mâché donkey.",
+        "blanks": [
+          {
+            "key": "pinata_target",
+            "label": "An unfortunate target",
+            "panicSuggestions": [
+              "the party host dressed as a clown",
+              "the slush puppy machine",
+              "the decorative plastic palm tree",
+              "a tray of jelly cups",
+              "the playcentre manager's clipboard",
+              "a giant stuffed bear",
+              "the fire alarm pull station",
+              "a stack of cardboard pizza boxes",
+              "the sound system speaker",
+              "a parent's iced coffee"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Party Bags",
+        "template": "As the party ended, {name} handed out custom party bags containing a slice of cake, a balloon, and a {party_bag_item}.",
+        "blanks": [
+          {
+            "key": "party_bag_item",
+            "label": "A bizarre party bag gift",
+            "panicSuggestions": [
+              "single raw Brussels sprout",
+              "squeaky rubber duck",
+              "plastic kazoo",
+              "autographed photo of a hamster",
+              "jar of glitter",
+              "fake mustache",
+              "miniature magnifying glass",
+              "piece of bubble wrap",
+              "shiny pebble",
+              "pair of vampire fangs"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cooking-family-dinner",
+    "title": "Cooking Family Dinner",
+    "description": "Making a simple meal together turns into a culinary disaster.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Choosing the Recipe",
+        "template": "Instead of making simple spaghetti, {name} convinced the family to cook an extravagant recipe called '{recipe_name}'.",
+        "blanks": [
+          {
+            "key": "recipe_name",
+            "label": "A bizarre recipe title",
+            "panicSuggestions": [
+              "The Flaming Cheese Volcano",
+              "Mystery Meat Surprise Deluxe",
+              "Gravy-Infused Custard Pie",
+              "The Quadruple Broccoli Tower",
+              "Garlic Butter Fudge Fantasy",
+              "Sausage and Jelly Explosion",
+              "The Crushed Crisp Casserole",
+              "Pickled Egg Extravaganza",
+              "The Double-Fried Doughnut Burger",
+              "Turnip Delight Supreme"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: Prepping Ingredients",
+        "template": "While chopping vegetables, {name} insisted on wearing {kitchen_gear} for safety reasons.",
+        "blanks": [
+          {
+            "key": "kitchen_gear",
+            "label": "Over-the-top safety gear",
+            "panicSuggestions": [
+              "a welding mask and thick leather gloves",
+              "pair of swimming goggles and a snorkel",
+              "full suit of shiny armor",
+              "motorcycle helmet with the visor down",
+              "pair of heavy oven gloves on backwards",
+              "bright yellow hazmat suit",
+              "pair of ski goggles and earmuffs",
+              "gardening visor and elbow pads",
+              "fencing mask",
+              "high-visibility hi-vis vest"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Secret Ingredient",
+        "template": "When no one was looking, {name} added a secret ingredient to the pot: a whole bottle of {secret_ingredient}.",
+        "blanks": [
+          {
+            "key": "secret_ingredient",
+            "label": "An inappropriate condiment/liquid",
+            "panicSuggestions": [
+              "fizzy cola drink",
+              "mint-flavored mouthwash",
+              "spicy chilli sauce",
+              "sweet strawberry syrup",
+              "pickle juice",
+              "vanilla ice cream sauce",
+              "cold black coffee",
+              "apple cider vinegar",
+              "sparkling lemonade",
+              "liquidized garlic spread"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Smoke Alarm",
+        "template": "The smoke alarm went off when {name} accidentally left a tray of {burned_food} in the oven for three hours.",
+        "blanks": [
+          {
+            "key": "burned_food",
+            "label": "An unfortunate burned item",
+            "panicSuggestions": [
+              "garlic bread slices",
+              "frozen Yorkshire puddings",
+              "marshmallows",
+              "pork pies",
+              "cheese-stuffed crusts",
+              "fish fingers",
+              "sausage rolls",
+              "potato waffles",
+              "cinnamon rolls",
+              "slices of halloumi cheese"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: Setting the Table",
+        "template": "While setting the dining table, {name} replaced the standard cutlery with {strange_cutlery}.",
+        "blanks": [
+          {
+            "key": "strange_cutlery",
+            "label": "Absurd cutlery replacements",
+            "panicSuggestions": [
+              "pair of giant wooden salad tongs",
+              "plastic sand pit spades",
+              "pair of bamboo chopsticks joined by rubber bands",
+              "collection of tea scoops",
+              "pair of barbecue skewers",
+              "set of soup ladles",
+              "plastic butter knives",
+              "pair of tweezers",
+              "set of Measuring spoons",
+              "wooden ice lolly sticks"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Final Taste Test",
+        "template": "After taking the first bite, everyone agreed the meal tasted like {food_taste}, and we immediately ordered takeaway instead.",
+        "blanks": [
+          {
+            "key": "food_taste",
+            "label": "An awful taste comparison",
+            "panicSuggestions": [
+              "a soggy cardboard box full of pennies",
+              "warm garlic-scented toothpaste",
+              "boiled gym socks dipped in gravy",
+              "salty seawater and melted crayons",
+              "burnt toast soaked in grapefruit juice",
+              "lukewarm mint tea poured over broccoli",
+              "a rubber tyre soaked in vinegar",
+              "muddy pond water and lemon peel",
+              "stale biscuits dipped in pickle juice",
+              "a pencil eraser cooked in butter"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "disastrous-first-date",
+    "title": "The Disastrous Romantic Date",
+    "description": "An attempt at a romantic evening goes downhill fast.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Meeting Up",
+        "template": "To impress {his/her/their} date, {name} arrived at the meeting spot driving a {date_vehicle}.",
+        "blanks": [
+          {
+            "key": "date_vehicle",
+            "label": "An unromantic vehicle",
+            "panicSuggestions": [
+              "squeaky riding lawnmower",
+              "bright yellow tandem bicycle",
+              "pogo stick with streamers",
+              "borrowed ice cream van",
+              "vintage tractor",
+              "mobility scooter decorated with fairy lights",
+              "pair of roller skates",
+              "child's pedal car",
+              "delivery moped",
+              "horse-drawn milk cart"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Outfit",
+        "template": "When {name} took off {his/her/their} coat, {his/her/their} date was stunned to see {he/she/they} was wearing a {date_outfit}.",
+        "blanks": [
+          {
+            "key": "date_outfit",
+            "label": "An absurd date outfit",
+            "panicSuggestions": [
+              "sparkly sequined waistcoat with no shirt",
+              "full medieval tunic and tights",
+              "bright orange tracksuit made of velvet",
+              "tuxedo top paired with swimming trunks",
+              "dramatic floor-length wizard robe",
+              "high-visibility hi-vis jacket",
+              "onesie shaped like a sloth",
+              "chef's tall hat and apron",
+              "superhero costume with a cape",
+              "bow tie made of folded aluminum foil"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: Small Talk",
+        "template": "To break an awkward silence, {name} decided to talk for 20 minutes straight about {date_topic}.",
+        "blanks": [
+          {
+            "key": "date_topic",
+            "label": "An unromantic conversation topic",
+            "panicSuggestions": [
+              "the mating habits of garden slugs",
+              "a collection of antique door hinges",
+              "why pigeons are watching us",
+              "the history of the paperclip",
+              "a ranking of all local roundabouts by smoothness",
+              "why cereal is secretly a soup",
+              "a detailed breakdown of recent dreams",
+              "how to build a catapult from chopsticks",
+              "a list of all bad hair days in history",
+              "why turnip farming is the future"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Activity",
+        "template": "For the main date activity, {name} booked tickets for a competitive round of {date_activity}.",
+        "blanks": [
+          {
+            "key": "date_activity",
+            "label": "A bizarre date activity",
+            "panicSuggestions": [
+              "underwater speed-knitting",
+              "extreme floor-sweeping",
+              "extreme thumb-wrestling",
+              "blindfolded potato peeling",
+              "gravy tasting in a cold cellar",
+              "unicycle polo",
+              "competitive spoon-balancing",
+              "pigeon-watching in the rain",
+              "kazoo choir practice",
+              "arm-wrestling in a barn"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Mishap",
+        "template": "The date reached a climax when {name} attempted a romantic gesture and ended up knocking over a {date_disaster}.",
+        "blanks": [
+          {
+            "key": "date_disaster",
+            "label": "An unfortunate item to knock over",
+            "panicSuggestions": [
+              "tray of flickering candles onto the carpet",
+              "giant glass tower of champagne flutes",
+              "waiter carrying a hot bowl of soup",
+              "decorative aquarium full of goldfish",
+              "display board of expensive chocolates",
+              "musician's cello case",
+              "potted palm tree",
+              "tray of ice cream sundaes",
+              "coat rack full of heavy coats",
+              "cart of vintage cheeses"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: Saying Goodbye",
+        "template": "At the end of the night, {name} said goodbye by handing {his/her/their} date a {parting_gift} and asking for a second date.",
+        "blanks": [
+          {
+            "key": "parting_gift",
+            "label": "An unromantic parting gift",
+            "panicSuggestions": [
+              "single raw potato wrapped in ribbon",
+              "autographed photo of a hamster",
+              "half-used roll of sticky tape",
+              "squeaky rubber duck",
+              "jar of pickled eggs",
+              "shiny pebble found in the car park",
+              "plastic kazoo",
+              "coupon for 10% off lawnmower fuel",
+              "wooden spoon",
+              "half-eaten packet of mints"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fancy-restaurant-disaster",
+    "title": "The Fancy Restaurant Trip",
+    "description": "A high-end dining experience goes horribly wrong.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Arriving at the Table",
+        "template": "Upon being seated at the 5-star restaurant, {name} complained to the head waiter that the table lacked a proper {table_item}.",
+        "blanks": [
+          {
+            "key": "table_item",
+            "label": "An unsuited table item",
+            "panicSuggestions": [
+              "bottle of tomato ketchup",
+              "squeaky dog toy",
+              "plastic tablecloth with cartoons",
+              "jar of pickled onions",
+              "neon condiment dispenser",
+              "pair of barbecue tongs",
+              "bucket for chicken wings",
+              "set of plastic cutlery",
+              "placemat featuring dinosaurs",
+              "bottle of brown sauce"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: Reading the Menu",
+        "template": "When looking at the fancy menu, {name} ordered the chef's special: roasted duck served on a bed of {weird_menu_item}.",
+        "blanks": [
+          {
+            "key": "weird_menu_item",
+            "label": "A bizarre side dish",
+            "panicSuggestions": [
+              "crushed cheese puffs",
+              "lukewarm baked beans",
+              "sweet strawberry jelly",
+              "mint-flavored potato chips",
+              "pureed Brussels sprouts",
+              "cinnamon toast crunch",
+              "pickled turnip slices",
+              "warm custard",
+              "sour gummy bears",
+              "mashed banana"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: Table Manners",
+        "template": "During the starter course, {name} horrified the surrounding diners by using {his/her/their} napkin as a {napkin_use}.",
+        "blanks": [
+          {
+            "key": "napkin_use",
+            "label": "An improper use for a napkin",
+            "panicSuggestions": [
+              "dramatic superhero eye mask",
+              "makeshift sling for a fork",
+              "flag to wave down passing waiters",
+              "bib tied around their forehead",
+              "blindfold for a food guessing game",
+              "puppet to talk to the bread rolls",
+              "turban hat",
+              "sweatband during heavy chewing",
+              "polishing cloth for their shoe",
+              "handkerchief for dramatic weeping"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Sommelier",
+        "template": "When the sommelier offered a glass of fine wine, {name} took a sip, swilled it around, and declared it had notes of {wine_taste}.",
+        "blanks": [
+          {
+            "key": "wine_taste",
+            "label": "An absurd flavor note",
+            "panicSuggestions": [
+              "old gym socks and wet moss",
+              "burnt toast and battery acid",
+              "soggy cardboard and boiled cabbage",
+              "bubblegum and pencil shavings",
+              "lukewarm bathwater and lemon",
+              "strawberry jam and copper coins",
+              "crisp packet dust and vinegar",
+              "mown grass and melted crayons",
+              "stale biscuits and gravy",
+              "toothpaste and apple juice"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Main Course Accident",
+        "template": "While trying to cut {his/her/their} steak, {name}'s fork slipped, sending a piece of meat flying directly into {flying_target}.",
+        "blanks": [
+          {
+            "key": "flying_target",
+            "label": "An unfortunate restaurant target",
+            "panicSuggestions": [
+              "the chef's tall white hat",
+              "a diner's glass of champagne",
+              "the restaurant manager's pocket",
+              "a bowl of soup at the next table",
+              "the grand piano keyboard",
+              "a decorative ice sculpture",
+              "the dessert trolley",
+              "a waiter's tray of glasses",
+              "the chandelier hanging above",
+              "a coat pocket on a nearby chair"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Bill",
+        "template": "When the expensive bill arrived, {name} tried to bargain with the manager by offering to pay by {bill_payment}.",
+        "blanks": [
+          {
+            "key": "bill_payment",
+            "label": "An unacceptable restaurant payment",
+            "panicSuggestions": [
+              "washing dishes for 10 minutes",
+              "singing a dramatic opera solo in the kitchen",
+              "giving the staff a high-speed floor-sweeping demonstration",
+              "trading a shiny collection of sea shells",
+              "performing a magic trick with a napkin",
+              "writing a 5-star review on a paper napkin",
+              "trading a pocket watch that doesn't tick",
+              "offering a coupon for lawnmower repairs",
+              "handing over a squeaky rubber duck",
+              "promising a turnip harvest in autumn"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "first-driving-lesson",
+    "title": "The First Driving Lesson",
+    "description": "Getting behind the wheel for the first time turns into a neighborhood emergency.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Adjusting the Mirrors",
+        "template": "Before even starting the engine, {name} spent 20 minutes adjusting the driver's seat and installing a {car_accessory} on the dashboard.",
+        "blanks": [
+          {
+            "key": "car_accessory",
+            "label": "An unnecessary car accessory",
+            "panicSuggestions": [
+              "hula-dancing pineapple statue",
+              "full-sized disco ball",
+              "squeaky rubber chicken",
+              "framed photo of a capybara",
+              "neon sign that says 'DANGER'",
+              "miniature lava lamp",
+              "pair of giant fuzzy pink dice",
+              "turf of artificial grass",
+              "plastic skeleton co-pilot",
+              "shrine to instant noodles"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: Reversing Out of the Drive",
+        "template": "When told to check {his/her/their} blind spots, {name} instead leaned out the window and shouted '{driving_shout}' at a passing dog walker.",
+        "blanks": [
+          {
+            "key": "driving_shout",
+            "label": "A bizarre driving declaration",
+            "panicSuggestions": [
+              "BEHOLD MY WHEELS OF DOOM!",
+              "Is this pedal the turbo boost?!",
+              "Clear the road, civilians!",
+              "I have no idea what I'm doing!",
+              "May the clutch be with us!",
+              "Look away, I am reversing!",
+              "Fast and Furious 12 starts now!",
+              "Which one is the brakes again?!",
+              "Tell my family I loved them!",
+              "HONK IF YOU LIKE CUSTARD!"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Roundabout Disaster",
+        "template": "At the first roundabout, {name} panicked, missed the exit, and ended up driving in circles for 6 laps while listening to {driving_music}.",
+        "blanks": [
+          {
+            "key": "driving_music",
+            "label": "Dramatic driving music",
+            "panicSuggestions": [
+              "the kazoo theme from Titanic",
+              "aggressive Yodel remixes",
+              "heavy metal harp solos",
+              "a choir singing about cheese",
+              "dramatic circus clown music",
+              "high-speed bagpipes",
+              "the Mii Channel elevator music",
+              "a loop of foghorn sounds",
+              "German techno from 1994",
+              "aggressive sea shanties"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Parallel Park",
+        "template": "Attempting to parallel park near the corner shop, {name} mounted the curb and successfully parked the car inside a {parking_obstacle}.",
+        "blanks": [
+          {
+            "key": "parking_obstacle",
+            "label": "An unexpected parking spot",
+            "panicSuggestions": [
+              "display of garden gnomes",
+              "hedge shaped like a flamingo",
+              "row of plastic wheelie bins",
+              "neighbour's inflatable paddling pool",
+              "stack of supermarket bread crates",
+              "bus shelter full of teenagers",
+              "pyramid of tin cans",
+              "florist's outdoor bucket display",
+              "pigeon feeding area",
+              "construction zone sand pit"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: Emergency Braking",
+        "template": "During the emergency stop test, {name} hit the brakes so hard that a {glovebox_item} flew out of the glovebox and landed on the instructor's head.",
+        "blanks": [
+          {
+            "key": "glovebox_item",
+            "label": "An odd glovebox object",
+            "panicSuggestions": [
+              "half-eaten sausage roll",
+              "squeaky dog toy",
+              "bottle of glitter spray",
+              "single woolly sock",
+              "jar of pickled eggs",
+              "plastic kazoo",
+              "dramatic superhero eye mask",
+              "tube of mustache wax",
+              "unopened bag of wotsits",
+              "vintage cassette tape"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Final Result",
+        "template": "At the end of the lesson, the instructor handed {name} {his/her/their} feedback sheet, which simply said: 'Great steering, but please stop trying to {driving_habit}.'",
+        "blanks": [
+          {
+            "key": "driving_habit",
+            "label": "An absurd driving habit",
+            "panicSuggestions": [
+              "high-five pedestrians at red lights",
+              "steer using barbecue tongs",
+              "challenge cyclists to drag races",
+              "use a megaphone instead of the indicator",
+              "wave a cape out the sunroof",
+              "pay toll booths with shiny buttons",
+              "sing opera every time you gear shift",
+              "park on the pavement to feed ducks",
+              "negotiate right-of-way with rock-paper-scissors",
+              "brake for imaginary squirrels"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "disastrous-camping-trip",
+    "title": "The Wild Camping Disaster",
+    "description": "An off-grid weekend in nature goes completely wild.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Pitching the Tent",
+        "template": "While trying to pitch the tent, {name} lost the instruction manual and accidentally built a structure that looked like a {tent_shape}.",
+        "blanks": [
+          {
+            "key": "tent_shape",
+            "label": "A bizarre shape for a tent",
+            "panicSuggestions": [
+              "lopsided cardboard box",
+              "giant green pyramid of despair",
+              "deflated hot air balloon",
+              "shabby nylon sausage",
+              "windblown umbrella",
+              "soggy nylon croissant",
+              "fortress made for guinea pigs",
+              "crashed UFO",
+              "giant triangle of confusion",
+              "trap for wild badgers"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: Campfire Cooking",
+        "template": "For dinner, {name} volunteered to cook over the campfire, resulting in a burnt meal of sausages infused with {campfire_flavor}.",
+        "blanks": [
+          {
+            "key": "campfire_flavor",
+            "label": "An awful campfire ingredient",
+            "panicSuggestions": [
+              "crushed spearmint toothpaste",
+              "pine needles and mosquito spray",
+              "fizzy orange soda",
+              "melted marshmallows and gravy",
+              "stale salt and vinegar crisp dust",
+              "pickle juice and ash",
+              "lukewarm energy drink",
+              "pureed Brussels sprouts",
+              "garlic butter fudge",
+              "hot apple cider vinegar"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: Midnight Wildlife Encounter",
+        "template": "At 2 AM, the camp was awakened by a rustling sound outside. {name} bravely unzipped the tent flap armed only with a {camping_weapon}.",
+        "blanks": [
+          {
+            "key": "camping_weapon",
+            "label": "An ineffective defense tool",
+            "panicSuggestions": [
+              "soggy pool noodle",
+              "pair of barbecue tongs",
+              "squeaky rubber duck",
+              "rolled-up comic book",
+              "plastic selfie stick",
+              "tube of glow-in-the-dark paint",
+              "single flip-flop",
+              "feather duster",
+              "tin of baked beans",
+              "light-up lightsaber toy"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Creature Revealed",
+        "template": "The terrifying intruder turning over the bins wasn't a bear or a wolf, but a very hungry {wildlife_creature} holding a {stolen_camp_item}.",
+        "blanks": [
+          {
+            "key": "wildlife_creature",
+            "label": "An un-threatening animal",
+            "panicSuggestions": [
+              "pigeon wearing a bread crust collar",
+              "chubby squirrel in a woolly hat",
+              "hedgehog with an attitude",
+              "farmyard duck looking for drama",
+              "wild rabbit named Dave",
+              "lost ginger cat",
+              "single confused seagull",
+              "badger with a moustache",
+              "escaped pet hamster",
+              "goose demanding respect"
+            ]
+          },
+          {
+            "key": "stolen_camp_item",
+            "label": "A strange stolen camp item",
+            "panicSuggestions": [
+              "half-eaten tube of Pringles",
+              "single crosc shoe",
+              "sleeve of digestive biscuits",
+              "pair of neon sunglasses",
+              "headtorch set to strobe mode",
+              "marshmallow roasting fork",
+              "bottle of tomato ketchup",
+              "map of the campsite",
+              "tooth-brush",
+              "camping pillow"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: Torrential Rain",
+        "template": "When the thunderstorm hit, the tent floor flooded, forcing {name} to sleep inside {his/her/their} sleeping bag while floating on a {floating_device}.",
+        "blanks": [
+          {
+            "key": "floating_device",
+            "label": "An absurd floating raft",
+            "panicSuggestions": [
+              "giant inflatable avocado",
+              "plastic picnic table lid",
+              "foam yoga mat",
+              "couple of linked air mattresses",
+              "pair of bodyboards",
+              "upturned cool box",
+              "inflatable pizza slice",
+              "giant pool donut",
+              "layer of empty plastic bottles",
+              "tarpaulin pulled like a kayak"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: Packing Up in Mud",
+        "template": "We packed up at dawn covered in mud, with {name} declaring that {he/she/they} would never go camping again unless the site provided {glamping_luxury}.",
+        "blanks": [
+          {
+            "key": "glamping_luxury",
+            "label": "An ridiculous glamping demand",
+            "panicSuggestions": [
+              "heated floors and a personal butler",
+              "a chocolate fountain in every tent",
+              "a 24-hour pizza delivery drone",
+              "en-suite Jacuzzi with disco lights",
+              "a personal waffle chef",
+              "air-conditioned sleeping pods",
+              "high-speed Wi-Fi in the wilderness",
+              "a butler trained in roasting marshmallows",
+              "a plush velvet king-sized bed",
+              "a robot to carry all backpacks"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "school-photo-day",
+    "title": "School Photo Day",
+    "description": "An annual rite of passage ruined by questionable style choices.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Morning Preparation",
+        "template": "On the morning of school photos, {name} woke up early to style {his/her/their} hair using half a bottle of {hair_product}.",
+        "blanks": [
+          {
+            "key": "hair_product",
+            "label": "An inappropriate hair product",
+            "panicSuggestions": [
+              "glittery slime",
+              "olive oil and honey mix",
+              "extra-hold carpet glue",
+              "melted marshmallow fluff",
+              "bright pink hair chalk",
+              "liquidized avocado paste",
+              "coconut-scented shoe polish",
+              "fizzy cola syrup",
+              "garlic-infused hair wax",
+              "strawberry jam"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Outfit Mishap",
+        "template": "Right before leaving the house, {name} spilled breakfast down {his/her/their} clean shirt and had to borrow an emergency backup top that featured a picture of a {backup_shirt_print}.",
+        "blanks": [
+          {
+            "key": "backup_shirt_print",
+            "label": "An embarrassing t-shirt graphic",
+            "panicSuggestions": [
+              "dancing turnip wearing sunglasses",
+              "dramatic cat shooting laser beams",
+              "sarcastic potato saying 'NOPE'",
+              "giant glittery unicorn",
+              "vintage boyband from 1999",
+              "bowl of ramen with eyes",
+              "screaming hamster",
+              "high-definition hot dog",
+              "neon pug wearing a visor",
+              "meme of a confused owl"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Pre-Photo Disaster",
+        "template": "During break time, 10 minutes before photos, {name} accidentally got involved in an intense game of {breaktime_game} in the muddy quad.",
+        "blanks": [
+          {
+            "key": "breaktime_game",
+            "label": "A messy breaktime activity",
+            "panicSuggestions": [
+              "competitive custard-dodging",
+              "extreme floor-sweeping races",
+              "gravy-sponge catching",
+              "high-speed mud sliding",
+              "blindfolded dodgeball with tomatoes",
+              "puddle leaping contests",
+              "ketchup-packet thumb wrestling",
+              "wet napkin tag",
+              "unicycle jousting",
+              "pie-throwing rehearsal"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: In Front of the Camera",
+        "template": "When sitting on the stool, the photographer asked {name} to smile naturally, but {he/she/they} instead hit a posture that looked like a {weird_pose}.",
+        "blanks": [
+          {
+            "key": "weird_pose",
+            "label": "A terrible photo pose",
+            "panicSuggestions": [
+              "confused Victorian ghost",
+              "surprised meerkat catching a fly",
+              "statue of a disgruntled goblin",
+              "superhero having a knee cramp",
+              "pirate realizing they lost their map",
+              "robot running out of battery",
+              "dramatic opera singer hitting a high note",
+              "person who just ate a sour lemon",
+              "model posing with a severe neck twitch",
+              "champion floor-sweeper accepting an award"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: Background Selection",
+        "template": "Instead of choosing the standard blue studio background, {name} paid £2 extra to have {his/her/their} photo set against a digital backdrop of {digital_backdrop}.",
+        "blanks": [
+          {
+            "key": "digital_backdrop",
+            "label": "An absurd digital background",
+            "panicSuggestions": [
+              "an exploding cheese factory",
+              "a herd of galloping llamas in space",
+              "a dramatic laser beam grid from 1988",
+              "a giant floating garlic bread slice",
+              "a medieval castle under siege by ducks",
+              "a neon retro arcade",
+              "a stormy sky full of flying waffles",
+              "a tropical beach overrun by capybaras",
+              "a deep-space nebula full of kittens",
+              "a underwater disco"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: Proofs Arrive Home",
+        "template": "When the printed photo proofs arrived home three weeks later, the family agreed it was an instant classic that would definitely be framed on the mantelpiece until {proof_consequence}.",
+        "blanks": [
+          {
+            "key": "proof_consequence",
+            "label": "An embarrassing future event",
+            "panicSuggestions": [
+              "their 21st birthday party",
+              "their wedding day slide show",
+              "the end of time itself",
+              "they pass their driving test",
+              "they move out to live in a cave",
+              "they win a Nobel Prize for turnip farming",
+              "the cat knocks it off the shelf",
+              "they agree to clean their bedroom",
+              "their first job interview",
+              "they pay us £100 to burn it"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "social-media-viral-disaster",
+    "title": "Going Viral by Accident",
+    "description": "An innocent video post turns someone into an overnight internet meme.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Recording the Video",
+        "template": "{name} decided to record a quick 15-second video in the living room demonstrating a new dance trend called '{trend_dance_name}'.",
+        "blanks": [
+          {
+            "key": "trend_dance_name",
+            "label": "A ridiculous dance name",
+            "panicSuggestions": [
+              "The Flailing Flamingo",
+              "The Angry Turnip Shuffle",
+              "The Electric Custard Slide",
+              "The Confused Robot Waltz",
+              "The Squeaky Shoe Shuffle",
+              "The Broken lawnmower",
+              "The Galactic Potato Hop",
+              "The Dramatic Pigeon Strut",
+              "The Buttered Toast Roll",
+              "The Sloth Sprint"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Background Blunder",
+        "template": "Unbeknownst to {name}, while {he/she/they} were dancing, a family member was in the background casually trying to {background_disaster}.",
+        "blanks": [
+          {
+            "key": "background_disaster",
+            "label": "An embarrassing background action",
+            "panicSuggestions": [
+              "eat a slice of pizza while wearing a snorkel",
+              "chase a runaway hamster with a saucepan",
+              "do high-speed karate chops in a dressing gown",
+              "balance a sofa cushion on their nose",
+              "vacuum the ceiling",
+              "dance with a floor mop",
+              "put a woolly hat on the family dog",
+              "fit an entire doughnut into their mouth",
+              "practice dramatic evil laughs",
+              "slide across the linoleum in socks"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: Over-night Views",
+        "template": "By the next morning, the video had racked up 3 million views, and commenters were calling {name} the world's leading expert in {accidental_fame}.",
+        "blanks": [
+          {
+            "key": "accidental_fame",
+            "label": "An absurd field of expertise",
+            "panicSuggestions": [
+              "accidental living room gymnastics",
+              "chaotic background energy",
+              "dramatic sock slipping",
+              "extreme floor-sweeping choreography",
+              "unintentional comedy performances",
+              "pet-confusing dance moves",
+              "high-speed furniture dodging",
+              "improvised kitchen choreography",
+              "interpretive slapstick art",
+              "household chaos management"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Brand Endorsement",
+        "template": "A major online company reached out to offer {name} a sponsorship deal, promising free supplies of {sponsored_product} for a year.",
+        "blanks": [
+          {
+            "key": "sponsored_product",
+            "label": "An unglamorous sponsored item",
+            "panicSuggestions": [
+              "canned mushy peas",
+              "squeaky rubber ducks",
+              "extra-large garlic baguettes",
+              "glittery dustpans and brushes",
+              "pickled onion jars",
+              "novelty socks with faces on them",
+              "instant noodle cups",
+              "bubble wrap rolls",
+              "tins of sardines in tomato sauce",
+              "plastic kazoo whistles"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: Local News Coverage",
+        "template": "A local news crew arrived at the front door to interview {name}, who agreed to speak on camera while wearing {interview_outfit}.",
+        "blanks": [
+          {
+            "key": "interview_outfit",
+            "label": "A ridiculous interview outfit",
+            "panicSuggestions": [
+              "a giant inflatable dinosaur suit",
+              "a pair of neon sunglasses and a bathrobe",
+              "a full suit of knight's armor",
+              "a velvet cape over pajamas",
+              "a chef's apron and tall white hat",
+              "a sparkly sombrero",
+              "high-visibility hi-vis vest and a bow tie",
+              "a superhero mask with swimming trunks",
+              "onesie shaped like a sloth",
+              "a crown made of foil"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Remix",
+        "template": "The saga concluded when a famous DJ turned {name}'s voice into a viral dance track titled '{song_title}' that played in every supermarket for months.",
+        "blanks": [
+          {
+            "key": "song_title",
+            "label": "A hilarious dance track title",
+            "panicSuggestions": [
+              "Drop the Custard (Remix)",
+              "Where is my Slipper?",
+              "Gravel in the Engine",
+              "The Hamster is Free",
+              "Turnip Party (Extended Mix)",
+              "Squeaky Floorboard Beat",
+              "Don't Touch the Thermostat",
+              "Gravy Train Drop",
+              "Socks in the Microwave",
+              "Out of Bread Crusts"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "weekend-job-interview",
+    "title": "The First Part-Time Job Interview",
+    "description": "Trying to get a weekend job turns into a high-stakes comedy of errors.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Preparing the CV",
+        "template": "{name} submitted a CV for a weekend job at a local store, listing {his/her/their} top skill as {special_skill}.",
+        "blanks": [
+          {
+            "key": "special_skill",
+            "label": "An unhelpful CV skill",
+            "panicSuggestions": [
+              "competitive floor-sweeping",
+              "mastery of the plastic kazoo",
+              "ability to spot badgers in the dark",
+              "rapid-fire thumb wrestling",
+              "balancing spoons on noses",
+              "professional level couch lounging",
+              "identifying crisp flavors by ear",
+              "extreme pogo-sticking",
+              "talking to household appliances",
+              "high-speed potato peeling"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Outfit",
+        "template": "To look professional for the interview, {name} dressed in a sharp blazer paired with {informal_wear}.",
+        "blanks": [
+          {
+            "key": "informal_wear",
+            "label": "An inappropriate lower-half outfit",
+            "panicSuggestions": [
+              "neon green swimming trunks",
+              "bright yellow fluffy slippers",
+              "pajama bottoms covered in donuts",
+              "tartan kilt over tracksuit bottoms",
+              "pair of roller skates",
+              "dramatic sequined leggings",
+              "gardening overalls",
+              "muddy football boots",
+              "velvet shorts",
+              "dinosaur-claw slippers"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Strengths Question",
+        "template": "When the manager asked {name} to describe a time {he/she/they} handled a stressful situation, {he/she/they} proudly told a story about {stressful_story}.",
+        "blanks": [
+          {
+            "key": "stressful_story",
+            "label": "An absurd personal triumph",
+            "panicSuggestions": [
+              "rescuing a pie from a burning toaster",
+              "defeating a wasp using a spatula",
+              "building a cardboard fortress in 5 minutes",
+              "organizing a revolt against bad cafeteria chips",
+              "fixing a leaky tap with chewing gum",
+              "surviving an attack by a rogue goose",
+              "escaping a locked bathroom using a paperclip",
+              "winning a staring contest with a cat",
+              "re-stacking a fallen display of beans",
+              "finding a lost sock behind the radiator"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Practical Test",
+        "template": "For the practical assessment, {name} was asked to demonstrate customer service by selling a {worthless_item} to an actor playing a difficult customer.",
+        "blanks": [
+          {
+            "key": "worthless_item",
+            "label": "A useless item to sell",
+            "panicSuggestions": [
+              "single rusty nail",
+              "jar of lukewarm bathwater",
+              "half-eaten packet of mints",
+              "squeaky rubber chicken",
+              "broken plastic comb",
+              "bag of dry leaves",
+              "used tea bag",
+              "shiny round rock",
+              "cardboard tube from kitchen roll",
+              "bent paperclip"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Mishap",
+        "template": "While shaking hands to conclude the interview, {name} accidentally knocked over a display of {display_disaster} that crashed across the shop floor.",
+        "blanks": [
+          {
+            "key": "display_disaster",
+            "label": "A fragile store display",
+            "panicSuggestions": [
+              "500 stacked tins of baked beans",
+              "pyramid of expensive perfume bottles",
+              "tower of glittery glass baubles",
+              "display rack full of sunglasses",
+              "stack of bucket and spade sets",
+              "pyramid of toilet paper rolls",
+              "shelf full of porcelain garden gnomes",
+              "cart full of tennis balls",
+              "rack of neon umbrellas",
+              "tower of fishbowls"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Job Offer",
+        "template": "Surprisingly, the manager offered {name} the job on the spot, but only under the strict condition that {he/she/they} never {job_prohibition} during work hours.",
+        "blanks": [
+          {
+            "key": "job_prohibition",
+            "label": "An absurd workplace rule",
+            "panicSuggestions": [
+              "challenge customers to thumb-wrestling matches",
+              "sing opera over the store tannoy system",
+              "use barbecue tongs to hand out receipts",
+              "wear a wizard hat on the till",
+              "try to barter prices using shiny buttons",
+              "ride a unicycle through aisle 4",
+              "replace the store background music with heavy metal",
+              "store hamsters in the staff fridge",
+              "use a megaphone for price checks",
+              "charge extra for polite smiles"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "school-talent-show",
+    "title": "The School Talent Show",
+    "description": "An annual showcase of questionable skills descends into onstage anarchy.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Backstage Jitters",
+        "template": "Five minutes before going on stage, {name} realized {he/she/they} had left {his/her/their} main prop behind and had to perform using a {backstage_prop} instead.",
+        "blanks": [
+          {
+            "key": "backstage_prop",
+            "label": "An unsuitable stage prop",
+            "panicSuggestions": [
+              "squeaky rubber chicken",
+              "full-sized mop and bucket",
+              "half-eaten sausage roll",
+              "potted fern from the corridor",
+              "vintage toaster",
+              "giant plastic spatula",
+              "life-sized cardboard cutout of Shrek",
+              "bag of raw turnips",
+              "traffic cone",
+              "soggy pool noodle"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Costume Choice",
+        "template": "The curtains opened to reveal {name} standing under the spotlight wearing a {stage_costume} and looking extremely confident.",
+        "blanks": [
+          {
+            "key": "stage_costume",
+            "label": "An absurd stage outfit",
+            "panicSuggestions": [
+              "full suit of shiny armor",
+              "sparkly sequined onesie",
+              "bright yellow inflatable sumo suit",
+              "dramatic velvet cape over pajamas",
+              "chef's apron and tall white hat",
+              "dinosaur costume with flippers",
+              "high-visibility hi-vis vest and bow tie",
+              "tutu over heavy winter coat",
+              "superhero suit with swimming trunks",
+              "wizard robe made of aluminum foil"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Performance",
+        "template": "For {his/her/their} talent, {name} delivered a 3-minute routine consisting entirely of {talent_routine} set to loud music.",
+        "blanks": [
+          {
+            "key": "talent_routine",
+            "label": "A bizarre talent routine",
+            "panicSuggestions": [
+              "aggressive tap dancing in rubber boots",
+              "playing heavy metal solos on a plastic kazoo",
+              "balancing 14 wooden spoons on their chin",
+              "doing high-speed commando crawls",
+              "dramatic opera singing about mashed potatoes",
+              "playing the recorder out of tune with their nose",
+              "blindfolded potato peeling",
+              "unicycle jousting against an imaginary knight",
+              "high-energy karate chopping against cardboard",
+              "doing the Macarena backwards"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Technical Malfunction",
+        "template": "Midway through the act, the sound system glitched and started blasting {sound_glitch} through the hall speakers.",
+        "blanks": [
+          {
+            "key": "sound_glitch",
+            "label": "An unexpected sound effect",
+            "panicSuggestions": [
+              "loud foghorn noises on loop",
+              "duck quacking sound effects",
+              "dramatic circus clown organ music",
+              "whale mating calls",
+              "Yodel music played at triple speed",
+              "squeaky shoe noises",
+              "aggressive sea shanties",
+              "a choir reciting cereal box ingredients",
+              "German techno from 1994",
+              "a recording of someone crunching celery"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Judges' Reaction",
+        "template": "Head judge and Deputy Headteacher stared in absolute silence before declaring the performance was 'uniquely disturbing' and holding up a sign that read {judge_sign}.",
+        "blanks": [
+          {
+            "key": "judge_sign",
+            "label": "A bizarre judge's score/message",
+            "panicSuggestions": [
+              "10/10 for chaos!",
+              "Please stop immediately.",
+              "BEHOLD THE CHEESE KING!",
+              "Send help!",
+              "0.5 out of 100",
+              "Why was there gravy?!",
+              "An absolute triumph of weirdness!",
+              "My eyes are burning!",
+              "Give this person a trophy now!",
+              "NO COMMENTS"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Grand Prize",
+        "template": "Despite the madness, {name} somehow won 3rd place and was awarded a shiny plastic trophy and a {prize_item}.",
+        "blanks": [
+          {
+            "key": "prize_item",
+            "label": "A underwhelming prize",
+            "panicSuggestions": [
+              "single raw potato with eyes drawn on",
+              "autographed photo of a hamster",
+              "voucher for 5% off lawnmower fuel",
+              "jar of pickled eggs",
+              "half-used roll of sticky tape",
+              "squeaky rubber duck",
+              "lifetime supply of mushy peas",
+              "shiny pebble found in the car park",
+              "plastic whistle that doesn't blow",
+              "box of expired tea bags"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "supermarket-sweep",
+    "title": "The Supermarket Sweep",
+    "description": "A simple trip for bread and milk escalates into a trolley-racing frenzy.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Grabbing a Trolley",
+        "template": "As soon as {name} unlocked a supermarket trolley, {he/she/they} put on {shopping_headgear} and treated aisle 1 like a Formula 1 racetrack.",
+        "blanks": [
+          {
+            "key": "shopping_headgear",
+            "label": "Unusual supermarket headwear",
+            "panicSuggestions": [
+              "a neon yellow cycling helmet",
+              "a hollowed-out watermelon",
+              "a sparkly sequined sombrero",
+              "a chef's tall white hat",
+              "a pair of oversized ski goggles",
+              "a velvet wizard hat",
+              "a shiny aluminum foil crown",
+              "a knight's visor",
+              "a pair of bunny ears",
+              "a swimming cap and goggles"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: Aisle 3 Havoc",
+        "template": "In the baked goods aisle, {name} created a giant barricade out of {trolley_stack} to stop other shoppers from getting to the last loaf of bread.",
+        "blanks": [
+          {
+            "key": "trolley_stack",
+            "label": "Random stacked food items",
+            "panicSuggestions": [
+              "40 boxes of value cornflakes",
+              "stacked tins of baked beans",
+              "towers of crumpets",
+              "bags of giant marshmallows",
+              "boxes of washing powder",
+              "crates of sparkling lemonade",
+              "pyramids of toilet paper",
+              "packs of crinkly crisps",
+              "jars of sandwich spread",
+              "sacks of king edward potatoes"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Tannoy Announcement",
+        "template": "Over the store loudspeaker, the manager announced: 'Would the customer in aisle 5 please stop trying to {tannoy_offense}.'",
+        "blanks": [
+          {
+            "key": "tannoy_offense",
+            "label": "An absurd store disturbance",
+            "panicSuggestions": [
+              "arm-wrestle the fishmonger",
+              "juggle frozen turkeys",
+              "bowl with pineapples down the main aisle",
+              "teach the security guard karate",
+              "challenge toddlers to trolley races",
+              "weigh their own shoes on the vegetable scales",
+              "sing opera to the cheese counter",
+              "build a fort out of cereal boxes",
+              "test mattress firmness by doing backflips",
+              "barter using shiny buttons"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Free Sample Station",
+        "template": "At the deli sample stand, {name} horrified the staff member by eating 12 free samples of cheese and describing the flavor as tasting like {sample_taste}.",
+        "blanks": [
+          {
+            "key": "sample_taste",
+            "label": "An unappetizing flavor description",
+            "panicSuggestions": [
+              "old gym socks soaked in gravy",
+              "burnt toast and battery acid",
+              "warm garlic toothpaste",
+              "boiled lawnmower clippings",
+              "soggy cardboard and vinegar",
+              "crisp packet dust and bathwater",
+              "pencil shavings and strawberry jam",
+              "salty seawater and melted crayons",
+              "stale biscuits dipped in pickle juice",
+              "lukewarm mint tea and broccoli"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: Self-Checkout Meltdown",
+        "template": "At the self-checkout, the machine repeatedly screamed 'UNEXPECTED ITEM IN BAGGING AREA' because {name} had scanned a {scanned_item}.",
+        "blanks": [
+          {
+            "key": "scanned_item",
+            "label": "A non-scanable object",
+            "panicSuggestions": [
+              "live garden gnome",
+              "borrowed shoe",
+              "squeaky rubber chicken",
+              "traffic cone",
+              "potted fern",
+              "half-knitted woolly scarf",
+              "plastic kazoo",
+              "soggy pool noodle",
+              "single raw turnip",
+              "pair of barbecue tongs"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Departure",
+        "template": "Security escorted {name} to the car park, where {he/she/they} drove off holding a receipt that was {receipt_length} long.",
+        "blanks": [
+          {
+            "key": "receipt_length",
+            "label": "An absurd receipt measurement",
+            "panicSuggestions": [
+              "14 meters long",
+              "longer than a blue whale",
+              "tall enough to reach the moon",
+              "as long as a football pitch",
+              "wrapped around the car 3 times",
+              "heavy enough to crush a turnip",
+              "thick as a telephone book",
+              "long enough to use as a skipping rope",
+              "covering the entire windscreen",
+              "trailing down the motorway"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "haunted-house-tour",
+    "title": "The Haunted House Tour",
+    "description": "A spooky ghost tour goes off the rails when the visitors are scarier than the ghosts.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Entering the Manor",
+        "template": "As the tour group entered Creepy Cobweb Manor, {name} set the mood by switching on a {haunted_tool} and pointing it at the ceiling.",
+        "blanks": [
+          {
+            "key": "haunted_tool",
+            "label": "An absurd ghost-hunting gadget",
+            "panicSuggestions": [
+              "disco ball flashlight",
+              "squeaky duck toy",
+              "bubble machine",
+              "light-up lightsaber toy",
+              "laser pointer shaped like a fish",
+              "flashing bicycle light",
+              "bright yellow megaphone",
+              "glitter spray bottle",
+              "plastic kazoo",
+              "headtorch set to rainbow strobe mode"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Grand Hall Ghost",
+        "template": "When a tour actor dressed as a phantom jumped out from behind a curtain, {name} didn't scream—{he/she/they} instead challenged the ghost to {ghost_challenge}.",
+        "blanks": [
+          {
+            "key": "ghost_challenge",
+            "label": "An un-scary challenge",
+            "panicSuggestions": [
+              "high-speed thumb wrestling",
+              "a competitive limbo contest",
+              "a game of rock-paper-scissors for £5",
+              "a tap-dancing battle",
+              "a staring contest",
+              "an arm-wrestling match on a coffin",
+              "a contest to see who can quack loudest",
+              "a game of hopscotch",
+              "a duel using barbecue tongs",
+              "a potato-peeling race"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Dungeon Creak",
+        "template": "Down in the dark dungeon, a mysterious creaking sound echoed through the room, which turned out to be {name} aggressively chewing on {creepy_snack}.",
+        "blanks": [
+          {
+            "key": "creepy_snack",
+            "label": "A loud or inappropriate snack",
+            "panicSuggestions": [
+              "dry celery sticks",
+              "a bag of extra-crunchy crisps",
+              "a raw turnip like an apple",
+              "a giant jawbreaker candy",
+              "pork scratchings",
+              "a frozen baguette",
+              "a bowl of dry cornflakes",
+              "a block of uncooked instant noodles",
+              "pickled onions from a jar",
+              "a massive carrot"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Portrait Room",
+        "template": "In the gallery, {name} noticed a spooky painting whose eyes seemed to follow you around the room, so {he/she/they} covered the painting with {portrait_cover}.",
+        "blanks": [
+          {
+            "key": "portrait_cover",
+            "label": "A ridiculous cover-up item",
+            "panicSuggestions": [
+              "a pair of neon sunglasses",
+              "a slice of processed cheese",
+              "a high-visibility hi-vis vest",
+              "a pair of fluffy earmuffs",
+              "a sticky note that said 'NO PEEKING'",
+              "a glittery sleeping mask",
+              "a paper party hat",
+              "a tea towel",
+              "a pair of fake mustache stickers",
+              "a spare woolly hat"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Mirror Maze",
+        "template": "Trapped in the haunted mirror maze, {name} tried to find the exit by throwing a {maze_projectile} at every reflection.",
+        "blanks": [
+          {
+            "key": "maze_projectile",
+            "label": "A strange thrown object",
+            "panicSuggestions": [
+              "squeaky rubber duck",
+              "single crosc shoe",
+              "roll of toilet paper",
+              "plastic spatula",
+              "glittery beanbag",
+              "soft velvet cushion",
+              "stuffed turnip toy",
+              "damp tea towel",
+              "foam finger",
+              "tennis ball"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: Escaping the Manor",
+        "template": "At the exit, the ghost tour guide officially certified {name} as 'Too Unhinged for Ghosts' and handed {him/her/them} a souvenir {haunted_souvenir}.",
+        "blanks": [
+          {
+            "key": "haunted_souvenir",
+            "label": "A weird ghost tour souvenir",
+            "panicSuggestions": [
+              "jar of certified mansion dust",
+              "haunted plastic kazoo",
+              "autographed photo of a gargoyle",
+              "squeaky toy skull",
+              "bag of ghost-shaped marshmallows",
+              "plastic spider on a ring",
+              "glow-in-the-dark turnip",
+              "certificate of braveness written in crayon",
+              "piece of velvet rope",
+              "fake vampire dentition set"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "high-stakes-bakeoff",
+    "title": "The Village Hall Bake Off",
+    "description": "Competitive baking reaches a boiling point over cake decorating.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Setting Up the Workstation",
+        "template": "When entering the village hall baking marquee, {name} unpacked {his/her/their} baking kit, which included a heavy-duty {baking_tool}.",
+        "blanks": [
+          {
+            "key": "baking_tool",
+            "label": "An unsuited baking tool",
+            "panicSuggestions": [
+              "wallpaper scraper",
+              "plumber's blowtorch",
+              "paint roller",
+              "pair of barbecue tongs",
+              "plastic sand pit spade",
+              "electric drill with a whisk attachment",
+              "gardening trowel",
+              "cricket bat",
+              "pair of hedge trimmers",
+              "rubber mallet"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Signature Bake",
+        "template": "For the signature challenge, {name} decided to bake a triple-layer sponge cake flavored with {signature_flavor}.",
+        "blanks": [
+          {
+            "key": "signature_flavor",
+            "label": "An awful cake flavor",
+            "panicSuggestions": [
+              "garlic mash and strawberry jam",
+              "pickle juice and dark chocolate",
+              "canned tuna and vanilla extract",
+              "Brussels sprout puree and icing sugar",
+              "mushy peas and peppermint",
+              "fizzy cola and curry powder",
+              "salty gravy and buttercream",
+              "baked beans and cinnamon",
+              "mustard and maple syrup",
+              "black pepper and lemonade"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: Showstopper Disaster",
+        "template": "During the showstopper challenge, {name}'s centerpiece cake collapsed into a pile of crumbs because {he/she/they} tried to build it around a {cake_structure}.",
+        "blanks": [
+          {
+            "key": "cake_structure",
+            "label": "An improper internal support",
+            "panicSuggestions": [
+              "cardboard toilet paper tube",
+              "plastic traffic cone",
+              "full bottle of fizzy lemonade",
+              "squeaky pogo stick",
+              "wooden broom handle",
+              "stack of plastic cups",
+              "potted cactus",
+              "giant inflatable doughnut",
+              "rolled-up newspaper",
+              "pair of chopsticks"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: The Sabotage Attempt",
+        "template": "Accused of trying to sabotage a rival baker, {name} claimed {he/she/they} was simply trying to decorate their cake with {sabotage_item}.",
+        "blanks": [
+          {
+            "key": "sabotage_item",
+            "label": "An inappropriate cake topping",
+            "panicSuggestions": [
+              "a handful of shiny buttons",
+              "glittery plastic spiders",
+              "handfuls of raw garden soil",
+              "crushed potato crisps",
+              "squeaky rubber ducks",
+              "colored paper clips",
+              "uncooked macaroni elbows",
+              "strips of gaffer tape",
+              "cotton wool balls",
+              "plastic army men"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: Technical Judging",
+        "template": "The celebrity judge tasted {name}'s technical bake, chewed thoughtfully, and declared the texture was remarkably similar to {bake_texture}.",
+        "blanks": [
+          {
+            "key": "bake_texture",
+            "label": "An unappealing texture comparison",
+            "panicSuggestions": [
+              "soggy bath sponge",
+              "dry Memory foam mattress",
+              "wet driveway cement",
+              "chewed eraser",
+              "damp cardboard box",
+              "hardened rubber tyre",
+              "sticky garden soil",
+              "compressed cotton wool",
+              "a soggy shoe insole",
+              "warm modeling clay"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: The Star Baker Award",
+        "template": "Despite burning the icing, {name} was named Star Baker and awarded a cake stand inscribed with the words: '{cake_inscription}'.",
+        "blanks": [
+          {
+            "key": "cake_inscription",
+            "label": "An absurd trophy inscription",
+            "panicSuggestions": [
+              "MOST CREATIVE CHAOS",
+              "SURVIVED THE CUSTARD",
+              "BEHOLD THE SPONGE KING",
+              "NEVER BAKE AGAIN",
+              "GRAVY DREAMS DO COME TRUE",
+              "BEST ATTEMPT AT A CAKE",
+              "10/10 FOR EFFORT, 0/10 FOR TASTE",
+              "THE BISCUIT EMPEROR",
+              "PURE UNADULTERATED MADNESS",
+              "KEEP THIS AWAY FROM CHILDREN"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "school-sports-day",
+    "title": "School Sports Day",
+    "description": "Egg-and-spoon races, sack races, and parent events get wildly competitive.",
+    "acts": [
+      {
+        "actNumber": 1,
+        "actTitle": "Act I: Warm-Up Routine",
+        "template": "Before the races began, {name} led team warming-up exercises on the grass while wearing {sports_footwear}.",
+        "blanks": [
+          {
+            "key": "sports_footwear",
+            "label": "Inappropriate sports shoes",
+            "panicSuggestions": [
+              "neon pink flippers",
+              "oversized clown shoes",
+              "bright yellow rubber wellies",
+              "dinosaur-claw slippers",
+              "pair of wooden clogs",
+              "roller skates on grass",
+              "high-heeled boots",
+              "bare feet wrapped in gaffer tape",
+              "crocs set to 'ultra-speed mode'",
+              "heavy steel-toed work boots"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 2,
+        "actTitle": "Act II: The Egg and Spoon Race",
+        "template": "During the Egg and Spoon race, {name}'s egg fell off, so {he/she/they} quickly replaced it with a {fake_egg} from {his/her/their} pocket.",
+        "blanks": [
+          {
+            "key": "fake_egg",
+            "label": "An improper egg substitute",
+            "panicSuggestions": [
+              "golf ball painted yellow",
+              "small round potato",
+              "squeaky rubber duck",
+              "jar of pickled onions",
+              "bright green avocado",
+              "large jawbreaker sweet",
+              "shiny round rock",
+              "solid wooden billiard ball",
+              "tangled ball of yarn",
+              "clementine orange"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 3,
+        "actTitle": "Act III: The Sack Race",
+        "template": "In the Sack Race, {name} lost control of {his/her/their} potato sack and hopped straight off the track into the {sports_obstacle}.",
+        "blanks": [
+          {
+            "key": "sports_obstacle",
+            "label": "An unexpected landing zone",
+            "panicSuggestions": [
+              "headteacher's deck chair",
+              "paddling pool for ice drinks",
+              "display of trophies",
+              "school mascot suit",
+              "tray of warm sausage rolls",
+              "bucket of wet sponges",
+              "parent spectating area picnic blanket",
+              "commentator's microphone table",
+              "potted hedge",
+              "pile of gym mats"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 4,
+        "actTitle": "Act IV: Tug of War",
+        "template": "During the Tug of War, {name} anchored the end of the rope by wrapping it around {his/her/their} waist and shouting '{tug_shout}'.",
+        "blanks": [
+          {
+            "key": "tug_shout",
+            "label": "A battle cry for tug of war",
+            "panicSuggestions": [
+              "PULL FOR THE CUSTARD!",
+              "YOU SHALL NOT PASS!",
+              "BEHOLD MY QUAD STRENGTH!",
+              "GRAVY IS ON THE LINE!",
+              "FEEL THE POWER OF THE TURNIP!",
+              "WE WILL NEVER SURRENDER!",
+              "ONE, TWO, THREE, SQUEAK!",
+              "FOR GLORY AND BISCUITS!",
+              "RELEASE THE DUCKS!",
+              "MY SHOE IS COMING OFF!"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 5,
+        "actTitle": "Act V: The Parents' Race",
+        "template": "The Parents' Race turned ugly when someone tripped, causing a 10-person pile-up in front of the finish line involving a flying {flying_sports_item}.",
+        "blanks": [
+          {
+            "key": "flying_sports_item",
+            "label": "A flying sports day object",
+            "panicSuggestions": [
+              "foam javelin",
+              "pair of neon sweatbands",
+              "whistle on a lanyard",
+              "squeaky baton",
+              "plastic megaphone",
+              "clip-board full of scores",
+              "bottle of energy drink",
+              "picnic hamper sandwich",
+              "sports day ribbon",
+              "stopwatch"
+            ]
+          }
+        ]
+      },
+      {
+        "actNumber": 6,
+        "actTitle": "Act VI: Medal Ceremony",
+        "template": "At the award presentation, {name} stood on the 1st place podium to receive the gold medal for {sports_achievement}.",
+        "blanks": [
+          {
+            "key": "sports_achievement",
+            "label": "An absurd athletic category",
+            "panicSuggestions": [
+              "Most Energetic Tumbling",
+              "Loudest Battle Cry",
+              "Fastest Recovery from a Sack Race Fall",
+              "Best Use of Barbecue Tongs in Athletics",
+              "Outstanding Performance in Egg Replacement",
+              "Most Dramatic Finish Line Slide",
+              "Extreme High-Speed Hopping",
+              "Best Sports Day Footwear Choice",
+              "Unrivaled Tug-of-War Anchoring",
+              "Overall Sports Day Anarchy"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
