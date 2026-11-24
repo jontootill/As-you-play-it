@@ -1,0 +1,270 @@
+:root {
+  --parchment-light: #f6efe0;
+  --parchment-base: #ece0c8;
+  --parchment-dark: #dfd0b2;
+  --ink-primary: #1e1a16;
+  --ink-muted: #52473b;
+  --gold-accent: #9c7c38;
+  --gold-bright: #b89446;
+  --oxblood: #631d26;
+  --oxblood-dark: #471219;
+  --shadow-ink: rgba(30, 26, 22, 0.16);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink-primary);
+  font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
+  background-color: var(--parchment-base);
+  /* Aged parchment radial vignette + subtle paper fiber bands */
+  background-image:
+    radial-gradient(circle at 50% 25%, var(--parchment-light) 0%, var(--parchment-base) 65%, var(--parchment-dark) 100%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(90, 70, 45, 0.025) 0px,
+      rgba(90, 70, 45, 0.025) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  padding: clamp(1rem, 3vw, 2.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Outer double-ruled folio border */
+.folio-frame {
+  width: 100%;
+  max-width: 1120px;
+  border: 4px double var(--gold-accent);
+  background: rgba(248, 242, 230, 0.72);
+  box-shadow:
+    0 12px 32px var(--shadow-ink),
+    inset 0 0 40px rgba(156, 124, 56, 0.12);
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Header / Broadsheet Title */
+.playbill-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.playbill-header h1 {
+  margin: 0;
+  font-family: "Cinzel", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+  line-height: 1.1;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 0.9rem auto;
+  max-width: 340px;
+}
+
+.ornament span:not(.fleuron) {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+}
+
+.fleuron {
+  color: var(--oxblood);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+/* Responsive 3-Card Stage Grid */
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Clickable Playbill Card */
+.playbill-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: var(--parchment-light);
+  border: 2px solid var(--gold-accent);
+  outline: 1px solid rgba(156, 124, 56, 0.35);
+  outline-offset: -6px;
+  box-shadow: 0 4px 14px rgba(30, 26, 22, 0.1);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+  overflow: hidden;
+}
+
+.playbill-card:hover,
+.playbill-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--oxblood);
+  box-shadow: 0 12px 24px rgba(30, 26, 22, 0.2);
+}
+
+.playbill-card:focus-visible {
+  outline: 3px solid var(--oxblood);
+  outline-offset: 2px;
+}
+
+/* Image Frame & Visual Unification Filter */
+.art-plate {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--parchment-dark);
+  border-bottom: 2px solid var(--gold-accent);
+  overflow: hidden;
+}
+
+.art-plate img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Subtly harmonizes all 3 images into warm antique tones */
+  filter: sepia(18%) contrast(104%) saturate(92%);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.playbill-card:hover .art-plate img {
+  transform: scale(1.03);
+  filter: sepia(8%) contrast(106%) saturate(100%);
+}
+
+/* Inner vignette shadow over artwork */
+.art-plate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 24px rgba(30, 26, 22, 0.32);
+  pointer-events: none;
+}
+
+/* Card Text Area */
+.card-body {
+  padding: 1.35rem 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+}
+
+.act-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.card-body h2 {
+  margin: 0 0 0.5rem;
+  font-family: "Cinzel", Palatino, Georgia, serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-primary);
+}
+
+.tagline {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--ink-muted);
+  flex: 1;
+}
+
+.enter-cue {
+  display: inline-block;
+  align-self: center;
+  padding: 0.4rem 1rem;
+  border-top: 1px solid var(--gold-accent);
+  border-bottom: 1px solid var(--gold-accent);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--oxblood);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.playbill-card:hover .enter-cue {
+  background-color: var(--oxblood);
+  color: var(--parchment-light);
+  border-color: var(--oxblood);
+}
+
+/* Distinctive Oxblood & Brass Styling for Couples Games Folder */
+.playbill-card--chamber {
+  background: linear-gradient(180deg, #f3e6d2 0%, #ead7be 100%);
+  border-color: var(--oxblood);
+}
+
+.playbill-card--chamber .act-label {
+  color: var(--oxblood);
+}
+
+.chamber-seal {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  z-index: 2;
+  background: var(--oxblood-dark);
+  color: var(--parchment-light);
+  border: 1px solid var(--gold-bright);
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Footer */
+.playbill-footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(156, 124, 56, 0.45);
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.playbill-footer p {
+  margin: 0;
+}

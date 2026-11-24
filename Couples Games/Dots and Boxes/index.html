@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couples Connection Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- SETUP SCREEN -->
+    <div id="setup-screen">
+        <h1>Game Setup</h1>
+
+        <!-- Mode Selection -->
+        <div class="section">
+            <label class="section-title">1. Select Intensity</label>
+            <div class="grid-options" id="intensity-group">
+                <button type="button" class="option-btn selected" data-value="romantic">Romantic</button>
+                <button type="button" class="option-btn" data-value="sensual">Sensual</button>
+                <button type="button" class="option-btn" data-value="erotic">Erotic</button>
+            </div>
+        </div>
+
+        <!-- Target Zone Selection -->
+        <div class="section">
+            <label class="section-title">2. Select Target Area</label>
+            <div class="grid-options-2col" id="zone-group">
+                <button type="button" class="option-btn selected" data-value="all">All / Any Zone</button>
+                <button type="button" class="option-btn" data-value="head_neck">Head & Neck</button>
+                <button type="button" class="option-btn" data-value="torso_back">Torso & Back</button>
+                <button type="button" class="option-btn" data-value="arms_hands">Arms & Hands</button>
+                <button type="button" class="option-btn" data-value="legs_feet">Legs & Feet</button>
+                <button type="button" class="option-btn" data-value="intimate">Intimate Zones</button>
+            </div>
+        </div>
+
+        <button type="button" class="primary-btn" onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- GAME PLAY SCREEN -->
+    <div id="game-screen" class="hidden">
+        <h2 id="current-mode-title">Challenge</h2>
+        
+        <div class="card-display" id="challenge-text">
+            Press the button below to draw your first prompt.
+        </div>
+
+        <button type="button" class="primary-btn" onclick="drawPrompt()">Draw Next Prompt</button>
+        <button type="button" class="secondary-btn" onclick="returnToSetup()">Change Settings</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>As You Play It</title>
+
+  <!-- Classical Serif Typography (with clean system serif fallbacks offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="folio-frame">
+    <header class="playbill-header">
+      <p class="eyebrow">A Compendium of Parlour Diversions</p>
+      <h1>As You Play It</h1>
+      <div class="ornament" aria-hidden="true">
+        <span></span>
+        <span class="fleuron">&#10086;</span>
+        <span></span>
+      </div>
+      <p class="subtitle">Select thy entertainment from the bill below</p>
+    </header>
+
+    <main class="stage-grid" aria-label="Available Games">
+      <!-- Game 1: Absolute Blanks -->
+      <a class="playbill-card" href="./Absolute Blanks/index.html" data-game="absolute-blanks">
+        <div class="art-plate">
+          <img
+            src="./Absolute Blanks.jpg"
+            alt="Woodcut-style illustration for Absolute Blanks"
+            loading="lazy"
+          />
+        </div>
+        <div class="card-body">
+          <span class="act-label">Act I &bull; Wordplay</span>
+          <h2>Absolute Blanks</h2>
+          <p class="tagline">A comedy of missing words and improvised absurdity.</p>
+          <span class="enter-cue">Enter the Stage &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Game 2: Absolute Nonsense -->
+      <a class="playbill-card" href="./Absolute nonsense/index.html" data-game="absolute-nonsense">
+        <div class="art-plate">
+          <img
+            src="./Absolute nonsense.jpg"
+            alt="Woodcut-style illustration for Absolute Nonsense"
+            loading="lazy"
+          />
+        </div>
+        <div class="card-body">
+          <span class="act-label">Act II &bull; Merriment</span>
+          <h2>Absolute Nonsense</h2>
+          <p class="tagline">Much ado about nothing of any sensible consequence.</p>
+          <span class="enter-cue">Enter the Stage &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Folder: Couples Games (Private Chamber) -->
+      <a class="playbill-card playbill-card--chamber" href="./Couples Games/index.html" data-game="couples-games">
+        <div class="art-plate">
+          <img
+            src="./Couples Games.jpg"
+            alt="Woodcut-style illustration for Couples Games"
+            loading="lazy"
+          />
+          <span class="chamber-seal" aria-label="Password Protected">&#128274; Private Chamber</span>
+        </div>
+        <div class="card-body">
+          <span class="act-label">Act III &bull; For Two Players</span>
+          <h2>Couples Games</h2>
+          <p class="tagline">Diversions behind closed curtains. Password required.</p>
+          <span class="enter-cue">Unlock Chamber &rarr;</span>
+        </div>
+      </a>
+    </main>
+
+    <footer class="playbill-footer">
+      <p>Printed &amp; Bound for Evening Revels</p>
+    </footer>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>

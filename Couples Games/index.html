@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Couples Games — Private Chamber</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="chamber-frame">
+    <nav class="top-bar" aria-label="Hub Navigation">
+      <a class="back-link" href="../index.html">&larr; Return to Main Playbill</a>
+      <button id="lock-btn" class="lock-btn" type="button" hidden>Lock Chamber</button>
+    </nav>
+
+    <header class="chamber-header">
+      <p class="eyebrow">Private Chamber &bull; For Two Players</p>
+      <h1>Couples Games</h1>
+      <div class="ornament" aria-hidden="true">
+        <span></span>
+        <span class="symbol">&#10086;</span>
+        <span></span>
+      </div>
+      <p class="subtitle">Speak the password to draw back the velvet curtain.</p>
+    </header>
+
+    <!-- Password Gate View -->
+    <section id="gate-panel" class="gate-panel" aria-labelledby="gate-heading">
+      <h2 id="gate-heading">Enter Chamber Password</h2>
+      <p class="gate-copy">
+        This section is set aside for couples diversions. Enter the password below to reveal the games.
+      </p>
+
+      <form id="password-form" class="gate-form" novalidate>
+        <label for="chamber-password" class="sr-only">Chamber Password</label>
+        <input
+          id="chamber-password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          placeholder="Enter password..."
+          required
+        />
+        <button type="submit">Unlock Chamber</button>
+      </form>
+
+      <p id="gate-error" class="gate-error" role="alert" aria-live="polite"></p>
+    </section>
+
+    <!-- Unlocked Games View (Hidden until password matches) -->
+    <main id="games-panel" class="games-panel" aria-label="Couples Games" hidden>
+      <div class="games-grid">
+        <!-- Scene I: Bodyheat -->
+        <a class="couple-game-card" href="./Bodyheat/index.html">
+          <div class="couple-art-frame">
+            <img
+              src="./images/Bodyheat.jpg"
+              alt="Woodcut illustration for Bodyheat"
+              loading="lazy"
+            />
+          </div>
+          <span class="card-tag">Scene I</span>
+          <h2>Bodyheat</h2>
+          <p>In a candlelit chamber lovers take turns selecting a partner’s favoured part, then choose two tender arts to bestow, rising from soft romance to deeper passion.</p>
+          <span class="play-cue">Begin Scene &rarr;</span>
+        </a>
+
+        <!-- Scene II: Boundaries and Boxes -->
+        <a class="couple-game-card" href="./Boundaries and boxes/index.html">
+          <div class="couple-art-frame">
+            <img
+              src="./images/Boundaries and Boxes.jpg"
+              alt="Woodcut illustration for Boundaries and Boxes"
+              loading="lazy"
+            />
+          </div>
+          <span class="card-tag">Scene II</span>
+          <h2>Boundaries and Boxes</h2>
+          <p>In contest lovers draw lines upon a grid of dots; he who closes the square may claim a part and set the heat of the caress that follows.</p>
+          <span class="play-cue">Begin Scene &rarr;</span>
+        </a>
+
+        <!-- Scene III: Dots and Boxes -->
+        <a class="couple-game-card" href="./Dots and Boxes/index.html">
+          <div class="couple-art-frame">
+            <img
+              src="./images/Dots and Boxes.png"
+              alt="Woodcut illustration for Dots and Boxes"
+              loading="lazy"
+            />
+          </div>
+          <span class="card-tag">Scene III</span>
+          <h2>Dots and Boxes</h2>
+          <p>Replace this description with your generated text for Dots and Boxes.</p>
+          <span class="play-cue">Begin Scene &rarr;</span>
+        </a>
+
+        <!-- Scene IV: Dominion of Desire -->
+        <a class="couple-game-card" href="./Dominion of Desire/index.html">
+          <div class="couple-art-frame">
+            <img
+              src="./images/Dominion of Desire.png"
+              alt="Woodcut illustration for Dominion of Desire"
+              loading="lazy"
+            />
+          </div>
+          <span class="card-tag">Scene IV</span>
+          <h2>Dominion of Desire</h2>
+          <p>Replace this description with your generated text for Dominion of Desire.</p>
+          <span class="play-cue">Begin Scene &rarr;</span>
+        </a>
+
+        <!-- Scene V: Your Pick -->
+        <a class="couple-game-card" href="./Your Pick/index.html">
+          <div class="couple-art-frame">
+            <img
+              src="./images/Your Pick.png"
+              alt="Woodcut illustration for Your Pick"
+              loading="lazy"
+            />
+          </div>
+          <span class="card-tag">Scene V</span>
+          <h2>Your Pick</h2>
+          <p>Replace this description with your generated text for Your Pick.</p>
+          <span class="play-cue">Begin Scene &rarr;</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (() => {
+      // Change this to your chosen password (case-sensitive below; use .trim().toLowerCase() if you prefer case-insensitive)
+      const CHAMBER_PASSWORD = "261213";
+      const STORAGE_KEY = "asYouPlayIt_couplesUnlocked";
+
+      const form = document.getElementById("password-form");
+      const input = document.getElementById("chamber-password");
+      const errorEl = document.getElementById("gate-error");
+      const gatePanel = document.getElementById("gate-panel");
+      const gamesPanel = document.getElementById("games-panel");
+      const lockBtn = document.getElementById("lock-btn");
+
+      function setUnlockedState(unlocked) {
+        gatePanel.hidden = unlocked;
+        gamesPanel.hidden = !unlocked;
+        lockBtn.hidden = !unlocked;
+        errorEl.textContent = "";
+
+        if (unlocked) {
+          sessionStorage.setItem(STORAGE_KEY, "true");
+        } else {
+          sessionStorage.removeItem(STORAGE_KEY);
+          input.value = "";
+          input.focus();
+        }
+      }
+
+      // Restore unlock state if already unlocked in this tab session
+      if (sessionStorage.getItem(STORAGE_KEY) === "true") {
+        setUnlockedState(true);
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const attempt = input.value.trim();
+
+        if (!attempt) {
+          errorEl.textContent = "Please enter a password first.";
+          input.focus();
+          return;
+        }
+
+        if (attempt === CHAMBER_PASSWORD) {
+          setUnlockedState(true);
+        } else {
+          errorEl.textContent = "That password is not recognised. Try again.";
+          input.select();
+        }
+      });
+
+      lockBtn.addEventListener("click", () => {
+        setUnlockedState(false);
+      });
+    })();
+  </script>
+</body>
+</html>
