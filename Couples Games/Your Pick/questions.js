@@ -3,40 +3,46 @@ const imagePools = {
   vanilla: {
     people: [
     // Smiles & faces
-    { src: "images/vanilla/people/soft-smile-female.jpeg", gender: "female", label: "this soft warm smile" },
-    { src: "images/vanilla/people/soft-smile-male.jpeg", gender: "male", label: "this soft warm smile" },
-    { src: "images/vanilla/people/laughing-female.jpeg", gender: "female", label: "this big laughing face" },
-    { src: "images/vanilla/people/laughing-male.jpeg", gender: "male", label: "this big laughing face" },
-    { src: "images/vanilla/people/playful-female.jpeg", gender: "female", label: "this playful mischievous smile" },
-    { src: "images/vanilla/people/playful-male.jpeg", gender: "male", label: "this playful mischievous smile" },
-    { src: "images/vanilla/people/morning-messy-female.jpeg", gender: "female", label: "this sleepy messy-haired look" },
-    { src: "images/vanilla/people/morning-messy-male.jpeg", gender: "male", label: "this sleepy messy-haired look" },
-    { src: "images/vanilla/people/morning-coffee-female.jpeg", gender: "female", label: "this happy-to-see-you face" },
-    { src: "images/vanilla/people/morning-coffee-male.jpeg", gender: "male", label: "this happy-to-see-you face" },
-    { src: "images/vanilla/people/morning-peaceful-female.jpeg", gender: "female", label: "this peaceful look" },
-    { src: "images/vanilla/people/morning-peaceful-male.jpeg", gender: "male", label: "this peaceful look" },
-    { src: "images/vanilla/people/flirty-female.jpeg", gender: "female", label: "this slightly flirty glance" },
-    { src: "images/vanilla/people/flirty-male.jpeg", gender: "male", label: "this slightly flirty glance" },
-    { src: "images/vanilla/people/silly-face-female.jpeg", gender: "female", label: "this ridiculous silly face" },
-    { src: "images/vanilla/people/silly-face-male.jpeg", gender: "male", label: "this ridiculous silly face" },
-    { src: "images/vanilla/people/surprised-face-female.jpeg", gender: "female", label: "this over-the-top surprised face" },
-    { src: "images/vanilla/people/surprised-face-male.jpeg", gender: "male", label: "this over-the-top surprised face" },
-    { src: "images/vanilla/people/dramatic-pose-female.jpeg", gender: "female", label: "this dramatic pose" },
-    { src: "images/vanilla/people/dramatic-pose-male.jpeg", gender: "male", label: "this dramatic pose" },
-    { src: "images/vanilla/people/peace-sign-female.jpeg", gender: "female", label: "this cheesy peace-sign face" },
-    { src: "images/vanilla/people/peace-sign-male.jpeg", gender: "male", label: "this cheesy peace-sign face" },
+    { src: "images/vanilla/people/soft-smile-female.jpeg", gender: "female", label: "my soft warm smile" },
+    { src: "images/vanilla/people/soft-smile-male.jpeg", gender: "male", label: "my soft warm smile" },
+    { src: "images/vanilla/people/laughing-female.jpeg", gender: "female", label: "my big laughing face" },
+    { src: "images/vanilla/people/laughing-male.jpeg", gender: "male", label: "my big laughing face" },
+    { src: "images/vanilla/people/playful-female.jpeg", gender: "female", label: "my playful mischievous smile" },
+    { src: "images/vanilla/people/playful-male.jpeg", gender: "male", label: "my playful mischievous smile" },
+    { src: "images/vanilla/people/morning-messy-female.jpeg", gender: "female", label: "my sleepy messy-haired look" },
+    { src: "images/vanilla/people/morning-messy-male.jpeg", gender: "male", label: "my sleepy messy-haired look" },
+    { src: "images/vanilla/people/morning-coffee-female.jpeg", gender: "female", label: "my happy-to-see-you face" },
+    { src: "images/vanilla/people/morning-coffee-male.jpeg", gender: "male", label: "my happy-to-see-you face" },
+    { src: "images/vanilla/people/morning-peaceful-female.jpeg", gender: "female", label: "my peaceful look" },
+    { src: "images/vanilla/people/morning-peaceful-male.jpeg", gender: "male", label: "my peaceful look" },
+    { src: "images/vanilla/people/flirty-female.jpeg", gender: "female", label: "my slightly flirty glance" },
+    { src: "images/vanilla/people/flirty-male.jpeg", gender: "male", label: "my slightly flirty glance" },
+    { src: "images/vanilla/people/silly-face-female.jpeg", gender: "female", label: "my ridiculous silly face" },
+    { src: "images/vanilla/people/silly-face-male.jpeg", gender: "male", label: "my ridiculous silly face" },
+    { src: "images/vanilla/people/surprised-face-female.jpeg", gender: "female", label: "my over-the-top surprised face" },
+    { src: "images/vanilla/people/surprised-face-male.jpeg", gender: "male", label: "my over-the-top surprised face" },
+    { src: "images/vanilla/people/dramatic-pose-female.jpeg", gender: "female", label: "my dramatic pose" },
+    { src: "images/vanilla/people/dramatic-pose-male.jpeg", gender: "male", label: "my dramatic pose" },
+    { src: "images/vanilla/people/peace-sign-female.jpeg", gender: "female", label: "my cheesy peace-sign face" },
+    { src: "images/vanilla/people/peace-sign-male.jpeg", gender: "male", label: "my cheesy peace-sign face" },
 
-    // Outfits / full body
-    { src: "images/vanilla/people/smart-casual-female.jpeg", gender: "female", label: "this smart casual look" },
-    { src: "images/vanilla/people/smart-casual-male.jpeg", gender: "male", label: "this smart casual look" },
-    { src: "images/vanilla/people/dressy-female.jpeg", gender: "female", label: "this slightly dressy outfit" },
-    { src: "images/vanilla/people/dressy-male.jpeg", gender: "male", label: "this slightly dressy outfit" },
-    { src: "images/vanilla/people/cosy-sexy-female.jpeg", gender: "female", label: "this cosy but sexy look" },
-    { src: "images/vanilla/people/cosy-sexy-male.jpeg", gender: "male", label: "this cosy but sexy look" },
-    { src: "images/vanilla/people/hoodie-female.jpeg", gender: "female", label: "this soft hoodie and shorts" },
-    { src: "images/vanilla/people/hoodie-male.jpeg", gender: "male", label: "this soft hoodie and shorts" },
-    { src: "images/vanilla/people/unbuttoned-female.jpeg", gender: "female", label: "this shirt slightly unbuttoned" },
-    { src: "images/vanilla/people/unbuttoned-male.jpeg", gender: "male", label: "this shirt slightly unbuttoned" }
+  ],
+
+  outfits: [
+    { src: "images/vanilla/outfits/silly-hat.jpeg", gender: "neutral", label: "this ridiculous hat" },
+    { src: "images/vanilla/outfits/socks.jpeg", gender: "neutral", label: "these mismatched socks" },
+    { src: "images/vanilla/outfits/rubber-gloves.jpeg", gender: "neutral", label: "these rubber gloves" },
+    { src: "images/vanilla/outfits/tie.jpeg", gender: "neutral", label: "this necktie" },
+    { src: "images/vanilla/outfits/smart-casual-female.jpeg", gender: "female", label: "this smart casual look" },
+    { src: "images/vanilla/outfits/smart-casual-male.jpeg", gender: "male", label: "this smart casual look" },
+    { src: "images/vanilla/outfits/dressy-female.jpeg", gender: "female", label: "this slightly dressy outfit" },
+    { src: "images/vanilla/outfits/dressy-male.jpeg", gender: "male", label: "this slightly dressy outfit" },
+    { src: "images/vanilla/outfits/cosy-sexy-female.jpeg", gender: "female", label: "this cosy but sexy look" },
+    { src: "images/vanilla/outfits/cosy-sexy-male.jpeg", gender: "male", label: "this cosy but sexy look" },
+    { src: "images/vanilla/outfits/hoodie-female.jpeg", gender: "female", label: "this soft hoodie and shorts" },
+    { src: "images/vanilla/outfits/hoodie-male.jpeg", gender: "male", label: "this soft hoodie and shorts" },
+    { src: "images/vanilla/outfits/unbuttoned-female.jpeg", gender: "female", label: "this shirt slightly unbuttoned" },
+    { src: "images/vanilla/outfits/unbuttoned-male.jpeg", gender: "male", label: "this shirt slightly unbuttoned" }
   ],
 
   objects: [
@@ -93,22 +99,32 @@ const imagePools = {
   medium: {
 
     people: [
-    { src: "images/medium/people/neck-kiss-female.jpeg", gender: "female", label: "this soft neck" },
-    { src: "images/medium/people/neck-kiss-male.jpeg", gender: "male", label: "this soft neck" },
-    { src: "images/medium/people/lower-back-female.jpeg", gender: "female", label: "this lower back" },
-    { src: "images/medium/people/lower-back-male.jpeg", gender: "male", label: "this lower back" },
-    { src: "images/medium/people/yoga-female.jpeg", gender: "female", label: "this yoga outfit" },
-    { src: "images/medium/people/yoga-male.jpeg", gender: "male", label: "this yoga outfit" },
-    { src: "images/medium/people/collarbone-female.jpeg", gender: "female", label: "these collarbones" },
-    { src: "images/medium/people/collarbone-male.jpeg", gender: "male", label: "these collarbones" },
-    { src: "images/medium/people/nude-female-back.jpeg", gender: "female", label: "this woman viewed from behind" },
-    { src: "images/medium/people/nude-male-back.jpeg", gender: "male", label: "this man viewed from behind" },
-    { src: "images/medium/people/lingerie-female.jpeg", gender: "female", label: "this woman wearing lingerie" },
+    { src: "images/medium/people/neck-kiss-female.jpeg", gender: "female", label: "my soft neck" },
+    { src: "images/medium/people/neck-kiss-male.jpeg", gender: "male", label: "my soft neck" },
+    { src: "images/medium/people/lower-back-female.jpeg", gender: "female", label: "my lower back" },
+    { src: "images/medium/people/lower-back-male.jpeg", gender: "male", label: "my lower back" },
+    { src: "images/medium/people/collarbone-female.jpeg", gender: "female", label: "my collarbones" },
+    { src: "images/medium/people/collarbone-male.jpeg", gender: "male", label: "my collarbones" },
+    { src: "images/medium/people/nude-female-back.jpeg", gender: "female", label: "my behind" },
+    { src: "images/medium/people/nude-male-back.jpeg", gender: "male", label: "my behind" },
     { src: "images/medium/people/hairy-male.jpeg", gender: "male", label: "this hairy man" },
-    { src: "images/medium/people/hairy-female.jpeg", gender: "female", label: "this hairy woman" },
-    { src: "images/medium/people/y-fronts-male.jpeg", gender: "male", label: "this man wearing budgie smugglers" },
-    { src: "images/medium/people/babydoll-female.jpeg", gender: "female", label: "this woman wearing a babydoll" }
+    { src: "images/medium/people/hairy-female.jpeg", gender: "female", label: "this hairy woman" }   
 
+  ],
+
+  outfits: [
+    { src: "images/medium/outfits/lingerie-female.jpeg", gender: "female", label: "me wearing lingerie" },
+    { src: "images/medium/outfits/yoga-female.jpeg", gender: "female", label: "me in this yoga outfit" },
+    { src: "images/medium/outfits/yoga-male.jpeg", gender: "male", label: "me in this yoga outfit" },
+    { src: "images/medium/outfits/y-fronts-male.jpeg", gender: "male", label: "me wearing budgie smugglers" },
+    { src: "images/medium/outfits/babydoll-female.jpeg", gender: "female", label: "me wearing a babydoll" },
+    { src: "images/medium/outfits/man-wearing-lingerie.jpeg", gender: "male", label: "me wearing lingerie" },
+    { src: "images/medium/outfits/man-wearing-mankini.jpeg", gender: "male", label: "me wearing a mankini" },
+    { src: "images/medium/outfits/man-wearing-yfronts.jpeg", gender: "male", label: "me wearing y-fronts" },
+    { src: "images/medium/outfits/hairy-woman-in-lingerie.jpeg", gender: "female", label: "me wearing lingerie in all my hairy goodness" },
+    { src: "images/medium/outfits/man-wearing-lingerie.jpeg", gender: "male", label: "me wearing lingerie" },
+    { src: "images/medium/outfits/man-wearing-mankini.jpeg", gender: "male", label: "me wearing a mankini" },
+    { src: "images/medium/outfits/man-wearing-yfronts.jpeg", gender: "male", label: "me wearing y-fronts" }
   ],
 
     objects: [
@@ -128,7 +144,7 @@ const imagePools = {
 
     activities: [
     { src: "images/medium/activities/kissing-neck.jpeg", gender: "neutral", label: "kissing your neck" },
-        { src: "images/medium/activities/running-naked.jpeg", gender: "neutral", label: "running naked on a beach" },
+    { src: "images/medium/activities/running-naked.jpeg", gender: "neutral", label: "running naked on a beach" },
     { src: "images/medium/activities/pressed-against-wall.jpeg", gender: "neutral", label: "being pressed against the wall" },
     { src: "images/medium/activities/on-the-sofa.jpeg", gender: "neutral", label: "on the sofa together" },
     { src: "images/medium/activities/slow-undressing.jpeg", gender: "neutral", label: "slow undressing" },
@@ -159,22 +175,19 @@ const imagePools = {
 
   spicy: {
     people: [
-    { src: "images/spicy/people/spread-legs-female.jpeg", gender: "female", label: "these open legs" },
-    { src: "images/spicy/people/rock-hard-penis.jpeg", gender: "male", label: "this rock hard penis" },
-    { src: "images/spicy/people/wet-vagina.jpeg", gender: "female", label: "this wet vagina" },
-    { src: "images/spicy/people/bum-up.jpeg", gender: "neutral", label: "this bum in the air" },
-    { src: "images/spicy/people/mouth-ready.jpeg", gender: "female", label: "this open mouth ready" },
-    { src: "images/spicy/people/arching-moaning.jpeg", gender: "female", label: "this arched back moaning" },
-    { src: "images/spicy/people/holding-penis.jpeg", gender: "male", label: "your penis being held" },
-    { src: "images/spicy/people/touching-labia.jpeg", gender: "female", label: "touching your labia" },
+    { src: "images/spicy/people/spread-legs-female.jpeg", gender: "female", label: "my open legs" },
+    { src: "images/spicy/people/rock-hard-penis.jpeg", gender: "male", label: "my rock hard penis" },
+    { src: "images/spicy/people/wet-vagina.jpeg", gender: "female", label: "my wet vagina" },
+    { src: "images/spicy/people/bum-up.jpeg", gender: "neutral", label: "my bum in the air" },
+    { src: "images/spicy/people/mouth-ready.jpeg", gender: "female", label: "my open mouth ready" },
     { src: "images/spicy/people/small-penis-male.jpeg", gender: "male", label: "this man with a small penis" },
-    { src: "images/spicy/people/large-penis-male.jpeg", gender: "male", label: "this man with a large penis" },
-    { src: "images/spicy/people/topless-large-breasted-female.jpeg", gender: "female", label: "this topless woman with large breasts" },
-    { src: "images/spicy/people/topless-muscular-male.jpeg", gender: "male", label: "this topless muscular man" },
-    { src: "images/spicy/people/topless-small-breasted-female.jpeg", gender: "female", label: "this topless woman with small breasts" },
-    { src: "images/spicy/people/seductive-lying-female.jpeg", gender: "female", label: "this woman lying seductively" },
-    { src: "images/spicy/people/seductive-lying-male.jpeg", gender: "male", label: "this man lying seductively" },
-  
+    { src: "images/spicy/people/large-penis-male.jpeg", gender: "male", label: "this man with a large penis" }
+  ],
+    outfits: [
+    { src: "images/spicy/outfits/topless-large-breasted-female.jpeg", gender: "female", label: "this topless woman with large breasts" },
+    { src: "images/spicy/outfits/topless-muscular-male.jpeg", gender: "male", label: "this topless muscular man" },
+    { src: "images/spicy/outfits/topless-small-breasted-female.jpeg", gender: "female", label: "this topless woman with small breasts" },
+    
   ],
     objects: [
     { src: "images/spicy/objects/thick-dildo.jpeg", gender: "female", label: "this thick dildo" },
@@ -185,6 +198,11 @@ const imagePools = {
     { src: "images/spicy/objects/condom.jpeg", gender: "male", label: "this condom" }
   ],
     activities: [
+    { src: "images/spicy/activities/seductive-lying-female.jpeg", gender: "female", label: "me lying seductively" },
+    { src: "images/spicy/activities/seductive-lying-male.jpeg", gender: "male", label: "me lying seductively" },
+    { src: "images/spicy/activities/arching-moaning.jpeg", gender: "female", label: "my arched back moaning" },
+    { src: "images/spicy/activities/holding-penis.jpeg", gender: "male", label: "my penis being held" },
+    { src: "images/spicy/activities/touching-labia.jpeg", gender: "female", label: "touching my labia" },
     { src: "images/spicy/activities/woman-oral.jpeg", gender: "female", label: "giving oral" },
     { src: "images/spicy/activities/man-oral.jpeg", gender: "male", label: "giving oral" },
     { src: "images/spicy/activities/from-behind.jpeg", gender: "neutral", label: "from behind" },
@@ -198,6 +216,7 @@ const imagePools = {
     { src: "images/spicy/activities/rough-doggy.jpeg", gender: "neutral", label: "rough doggy style" },
     { src: "images/spicy/activities/riding-hard.jpeg", gender: "neutral", label: "riding hard" },
     { src: "images/spicy/activities/holding-penis.jpeg", gender: "male", label: "holding your penis" },
+    { src: "images/spicy/activities/using-a-dildo.jpeg", gender: "female", label: "using your dildo" },
     { src: "images/spicy/activities/touching-labia.jpeg", gender: "female", label: "touching your labia" }
   ]
   }
@@ -227,7 +246,7 @@ const questions = {
 },
 {
   question: "Which would make you laugh the most if it appeared right now?",
-  pools: ["people", "objects", "activities"],
+  pools: ["people", "objects", "activities", "outfits"],
   count: 3,
   reveal: "would make you laugh the most"
 },
@@ -239,25 +258,25 @@ const questions = {
 },
 {
   question: "Which would you most want me to bring you in bed?",
-  pools: ["objects", "people"],
+  pools: ["objects", "people", "outfits"],
   count: 3,
   reveal: "would most want me to bring you in bed"
 },
 {
   question: "Which would you most want to do together in complete silence?",
-  pools: ["activities"],
+  pools: ["activities", "outfits"],
   count: 3,
   reveal: "would most want to do in silence"
 },
 {
   question: "Which would you most want to turn into a silly tradition?",
-  pools: ["activities", "objects"],
+  pools: ["activities", "objects", "outfits"],
   count: 3,
   reveal: "would most want to turn into a silly tradition"
 },
 {
   question: "Which would you most want to wake up and find next to you?",
-  pools: ["people", "objects"],
+  pools: ["people", "objects", "outfits"],
   count: 3,
   reveal: "would most want to wake up next to"
 },
@@ -269,31 +288,31 @@ const questions = {
 },
 {
   question: "Which would you most want to share when making a sandcastle?",
-  pools: ["objects", "activities", "people"],
+  pools: ["objects", "activities", "outfits"],
   count: 3,
-  reveal: "would most want to share under a blanket fort"
+  reveal: "would most want to share when making a sandcastle"
 },
 {
   question: "Which would you most want to do if we both became five years old again for one hour?",
-  pools: ["activities", "objects", "people"],
+  pools: ["activities", "objects", "people", "outfits"],
   count: 3,
   reveal: "would most want to do as five-year-olds"
 },
 {
   question: "Which would you most want me to wear for you?",
-  pools: ["objects"],
+  pools: ["outfits"],
   count: 3,
   reveal: "would most want me to wear"
 },
 {
   question: "Which would you most want to do with me on a lazy Sunday?",
-  pools: ["activities", "objects"],
+  pools: ["activities", "outfits"],
   count: 3,
   reveal: "would most want to do"
 },
 {
   question: "Which would you most want me to surprise you with?",
-  pools: ["objects", "activities"],
+  pools: ["objects", "activities", "outfits"],
   count: 3,
   reveal: "would most want me to surprise you with"
 },
@@ -305,7 +324,7 @@ const questions = {
 },
 {
   question: "Which would you most want to look at together tonight?",
-  pools: ["people", "objects", "activities"],
+  pools: ["people", "objects", "activities", "outfits"],
   count: 3,
   reveal: "would most want to look at "
 },
@@ -323,67 +342,67 @@ const questions = {
 },
 {
   question: "Which would you most want to see when you walk in the door?",
-  pools: ["people", "objects"],
+  pools: ["people", "objects", "outfits"],
   count: 3,
   reveal: "would most want to see this when they walk in the door"
 },
 {
   question: "Which would you most want us to do the next time it rains?",
-  pools: ["activities", "objects"],
+  pools: ["activities", "objects", "outfits"],
   count: 3,
   reveal: "would most want us to do"
 },
 {
   question: "Which would you most want to fall asleep next to?",
-  pools: ["people", "objects"],
+  pools: ["people", "objects", "outfits"],
   count: 3,
   reveal: "would most want to fall asleep next to"
 },
 {
   question: "Which would you most want me to steal from you and wear?",
-  pools: ["objects", "people"],
+  pools: ["objects", "outfits"],
   count: 3,
   reveal: "would most want you to steal and wear"
 },
 {
   question: "Which would you most want to do the second we get a free evening?",
-  pools: ["activities", "objects"],
+  pools: ["activities", "objects", "outfits"],
   count: 3,
   reveal: "would most want to do"
 },
 {
   question: "Which would you most want to feel against your skin right now?",
-  pools: ["people", "objects"],
+  pools: ["objects", "outfits"],
   count: 3,
-  reveal: "would most want to feel against their skin"
+  reveal: "would most want to feel against your skin"
 },
 {
   question: "Which would you most want me to do while you’re cooking?",
-  pools: ["activities", "people"],
+  pools: ["activities", "people", "outfits"],
   count: 3,
   reveal: "would most want you to do this while they’re cooking:"
 },
 {
   question: "Which would you most want to recreate with me?",
-  pools: ["activities", "objects"],
+  pools: ["activities", "objects", "outfits"],
   count: 3,
   reveal: "would most want to recreate"
 },
 {
   question: "Which would you most want to see across the table from you?",
-  pools: ["people", "objects"],
+  pools: ["people", "objects", "outfits"],
   count: 3,
   reveal: "would most want to see across the table"
 },
 {
   question: "Which would you most want waiting for you when you get home?",
-  pools: ["people", "objects", "activities"],
+  pools: ["people", "objects", "activities", "outfits"],
   count: 3,
   reveal: "would most want waiting for them when they get home"
 },
 {
   question: "Which would you most want to do with me right now if we had no plans?",
-  pools: ["activities", "objects", "people"],
+  pools: ["activities", "objects", "people", "outfits"],
   count: 3,
   reveal: "would most want to do"
 }
@@ -403,7 +422,7 @@ const questions = {
   },
   {
     question: "Which would you most want me to wear to bed tonight?",
-    pools: ["people", "objects"],
+    pools: ["outfits"],
     count: 3,
     reveal: "would most want you to wear to bed"
   },
@@ -415,7 +434,7 @@ const questions = {
   },
   {
     question: "Which would you most want me to do the moment we’re alone?",
-    pools: ["people", "activities"],
+    pools: ["people", "activities", "outfits"],
     count: 3,
     reveal: "would most want you to do"
   },
@@ -427,15 +446,15 @@ const questions = {
   },
   {
     question: "Which would you most want me to leave on while everything else comes off?",
-    pools: ["objects", "people"],
+    pools: ["objects", "outfits"],
     count: 3,
     reveal: "would most want you to leave on"
   },
   {
-    question: "Which would you most want to do in the kitchen when no one’s watching?",
-    pools: ["activities", "people"],
+    question: "Which would you most want to do when no one’s watching?",
+    pools: ["activities", "outfits"],
     count: 3,
-    reveal: "would most want to do in the kitchen"
+    reveal: "would most want to do"
   },
   {
     question: "Which would you most want to feel my breath on?",
@@ -445,7 +464,7 @@ const questions = {
   },
   {
     question: "Which would you most want to start with tonight?",
-    pools: ["people", "activities", "objects"],
+    pools: ["people", "activities", "objects", "outfits"],
     count: 3,
     reveal: "would most want to start with"
   }
@@ -458,55 +477,55 @@ const questions = {
   },
   {
     question: "Which would you most want to do to me right now?",
-    pools: ["people", "activities"],
+    pools: ["activities"],
     count: 3,
     reveal: "would most want to do to you:"
   },
   {
     question: "Which would you most want to feel inside you / around you?",
-    pools: ["people", "objects"],
+    pools: ["objects"],
     count: 3,
     reveal: "would most want to feel"
   },
   {
     question: "Which would you most want me to do with my hands?",
-    pools: ["people", "objects"],
+    pools: ["activities", "objects"],
     count: 3,
     reveal: "would most want you to do with you hands"
   },
   {
     question: "Which position would you most want to try in the next 30 minutes?",
-    pools: ["people", "activities"],
+    pools: ["activities"],
     count: 3,
     reveal: "would most want to try"
   },
   {
     question: "Which would you most want to taste right now?",
-    pools: ["people", "objects"],
+    pools: ["objects"],
     count: 3,
     reveal: "would most want to taste"
   },
   {
-    question: "Which would you most want me to say while I’m doing it?",
-    pools: ["people"],
+    question: "Which would you most want me to wear while I’m doing it?",
+    pools: ["outfits", "objects"],
     count: 3,
-    reveal: "would most want you to say"
+    reveal: "would most want you to wear"
   },
   {
     question: "Which would you most want to do until one of us can’t take it anymore?",
-    pools: ["people", "activities"],
+    pools: ["activities"],
     count: 3,
     reveal: "would most want "
   },
   {
     question: "Which would you most want me to leave marks on?",
-    pools: ["people"],
+    pools: ["people", "objects", "outfits"],
     count: 3,
     reveal: "would most want you to leave marks on"
   },
   {
     question: "Which would you most want to do with the lights on?",
-    pools: ["people", "activities"],
+    pools: ["people", "activities", "outfits"],
     count: 3,
     reveal: "would most want to do with the lights on"
   }

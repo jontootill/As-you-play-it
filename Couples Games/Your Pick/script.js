@@ -54,33 +54,40 @@ document.getElementById("start-btn").addEventListener("click", () => {
   loadNewQuestion();
 });
 
-// ========== HELPER: Get combined pools ==========
+// ========== HELPER: Get pools by heat rule ==========
+// - vanilla: only vanilla
+// - medium: only medium
+// - spicy: medium + spicy combined
 function getPoolsForHeat(heat) {
-  const v = imagePools.vanilla || { people: [], objects: [], activities: [] };
-  const m = imagePools.medium || { people: [], objects: [], activities: [] };
-  const s = imagePools.spicy || { people: [], objects: [], activities: [] };
+  const empty = { people: [], objects: [], activities: [], outfits: [] };
+  const v = imagePools.vanilla || empty;
+  const m = imagePools.medium || empty;
+  const s = imagePools.spicy || empty;
 
   if (heat === "vanilla") {
     return {
       people: v.people || [],
       objects: v.objects || [],
-      activities: v.activities || []
+      activities: v.activities || [],
+      outfits: v.outfits || []
     };
   }
 
   if (heat === "medium") {
     return {
-      people: [...(v.people || []), ...(m.people || [])],
-      objects: [...(v.objects || []), ...(m.objects || [])],
-      activities: m.activities || []
+      people: m.people || [],
+      objects: m.objects || [],
+      activities: m.activities || [],
+      outfits: m.outfits || []
     };
   }
 
-  // spicy
+  // spicy: combines medium + spicy
   return {
-    people: [...(v.people || []), ...(m.people || []), ...(s.people || [])],
-    objects: [...(v.objects || []), ...(m.objects || []), ...(s.objects || [])],
-    activities: s.activities || []
+    people: [...(m.people || []), ...(s.people || [])],
+    objects: [...(m.objects || []), ...(s.objects || [])],
+    activities: [...(m.activities || []), ...(s.activities || [])],
+    outfits: [...(m.outfits || []), ...(s.outfits || [])]
   };
 }
 
