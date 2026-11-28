@@ -1,292 +1,351 @@
-let challengesData = [];
-let modifiersData = [];
-let selectedIntensity = 'romantic';
-let isRolling = false;
+let selectedTileId = null;
+let currentOptions = [];
+let chosenChallengeText = '';
+let pendingIntensity = 'romantic';
+let isTakeoverMove = false;
+let turnActionMode = 'conquer'; // 'conquer' or 'fortify'
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await window.cardManager.loadData();
+
+  const resumeBtn = document.getElementById('resume-btn');
+  if (resumeBtn && window.gameEngine.hasSavedGame()) {
+    resumeBtn.classList.remove('hidden');
+    resumeBtn.addEventListener('click', () => {
+      if (window.gameEngine.loadState()) {
+        turnActionMode = 'conquer';
+        showGameScreen();
+        renderBoard();
+        updateUI();
+      }
+    });
+  }
+
   const setupForm = document.getElementById('setup-form');
-  const rollBtn = document.getElementById('roll-btn');
-  const closeModalBtn = document.getElementById('close-modal-btn');
-
   if (setupForm) {
-    setupForm.addEventListener('submit', async (e) => {
+    setupForm.addEventListener('submit', (e) => {
       e.preventDefault();
-
       const p1Name = document.getElementById('p1-name')?.value || 'Player 1';
       const p2Name = document.getElementById('p2-name')?.value || 'Player 2';
+      const intensity = document.querySelector('input[name="intensity"]:checked')?.value || 'romantic';
 
-      const intensityRadio = document.querySelector('input[name="intensity"]:checked');
-      if (intensityRadio) {
-        selectedIntensity = intensityRadio.value;
-      }
+      window.gameEngine.init({ p1Name, p2Name, intensity });
+      turnActionMode = 'conquer';
 
-      await loadGameData();
-
-      if (window.gameEngine && typeof window.gameEngine.init === 'function') {
-        window.gameEngine.init({ p1Name, p2Name });
-      }
-
-      document.getElementById('setup-screen')?.classList.remove('active');
-      document.getElementById('game-screen')?.classList.add('active');
-
+      showGameScreen();
       renderBoard();
       updateUI();
     });
   }
 
-  if (rollBtn) {
-    rollBtn.addEventListener('click', handleRoll);
-  }
+  document.getElementById('fortify-mode-btn')?.addEventListener('click', () => {
+    turnActionMode = turnActionMode === 'fortify' ? 'conquer' : 'fortify';
+    updateUI();
+  });
 
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', () => {
-      const modalOverlay = document.getElementById('card-modal');
-      if (modalOverlay) modalOverlay.classList.remove('active');
+  document.getElementById('end-turn-btn')?.addEventListener('click', () => {
+    turnActionMode = 'conquer';
+    window.gameEngine.switchTurn();
+    updateUI();
+  });
 
-      if (window.gameEngine) {
-        const activePlayer = window.gameEngine.getActivePlayer();
-        if (activePlayer) {
-          window.gameEngine.claimTile(activePlayer.position, activePlayer.id);
-        }
+  document.getElementById('swap-challenge-btn')?.addEventListener('click', handleSwapOptions);
+  document.getElementById('choice-a-btn')?.addEventListener('click', () => pickChallengeOption(0));
+  document.getElementById('choice-b-btn')?.addEventListener('click', () => pickChallengeOption(1));
+  document.getElementById('complete-challenge-btn')?.addEventListener('click', handleCompleteChallenge);
+  document.getElementById('cancel-modal-btn')?.addEventListener('click', closeModal);
 
-        window.gameEngine.checkWinCondition();
-        if (!window.gameEngine.gameState.isGameOver) {
-          window.gameEngine.switchTurn();
-        } else {
-          alert(`Game Over! ${activePlayer ? activePlayer.name : 'Player'} reached the end!`);
-        }
-      }
-
-      // Re-enable roll button safely
-      isRolling = false;
-      const btn = document.getElementById('roll-btn');
-      if (btn) btn.disabled = false;
-
-      updateUI();
-    });
-  }
+  document.getElementById('reset-campaign-btn')?.addEventListener('click', () => {
+    window.gameEngine.clearSave();
+    turnActionMode = 'conquer';
+    document.getElementById('game-screen')?.classList.remove('active');
+    document.getElementById('setup-screen')?.classList.add('active');
+    if (resumeBtn) resumeBtn.classList.add('hidden');
+  });
 });
 
-// Load JSON safely from assets/data
-async function loadGameData() {
-  try {
-    const challengesRes = await fetch('assets/data/challenges.json');
-    if (challengesRes.ok) challengesData = await challengesRes.json();
-  } catch (err) {
-    console.error('Error loading challenges:', err);
-  }
-
-  try {
-    const modifiersRes = await fetch('assets/data/modifiers.json');
-    if (modifiersRes.ok) modifiersData = await modifiersRes.json();
-  } catch (err) {
-    console.error('Error loading modifiers:', err);
-  }
+function showGameScreen() {
+  document.getElementById('setup-screen')?.classList.remove('active');
+  document.getElementById('game-screen')?.classList.add('active');
 }
 
-// Render grid board (18 tiles)
 function renderBoard() {
   const boardContainer = document.getElementById('board-container');
   if (!boardContainer) return;
   boardContainer.innerHTML = '';
 
-  for (let i = 0; i < 18; i++) {
-    const tileNum = i + 1;
-    const tile = document.createElement('div');
-    tile.className = 'tile';
-    tile.dataset.tileId = `tile_${tileNum}`;
+  const activeId = window.gameEngine.gameState.activePlayerId;
+  const ownedIds = window.gameEngine.getOwnedTiles(activeId);
 
-    const data = challengesData[i];
-    const tileLabel = (data && data.tile_name) ? data.tile_name : `Tile ${tileNum}`;
-    tile.dataset.tileName = tileLabel;
+  for (const section of window.BODY_SECTIONS) {
+    const secBlock = document.createElement('div');
+    secBlock.className = 'body-section';
 
-    tile.innerHTML = `
-      <span class="tile-number">#${tileNum}</span>
-      <span class="tile-label">${tileLabel}</span>
-      <div class="player-markers" id="markers-tile-${tileNum}"></div>
-      <div class="owner-badge" id="owner-tile-${tileNum}"></div>
+    const gatedLock = section.isGated && !window.gameEngine.isSection6Unlocked(activeId);
+    const header = document.createElement('div');
+    header.className = 'section-header';
+    header.innerHTML = `
+      <span>${section.name}</span>
+      <span class="majority-pill">Majority: ${section.majorityNeeded}/${section.tiles.length}${gatedLock ? ' · Locked' : ''}</span>
     `;
+    secBlock.appendChild(header);
 
-    boardContainer.appendChild(tile);
-  }
-}
+    const grid = document.createElement('div');
+    grid.className = 'section-tiles-grid';
 
-// Handle Roll & Position Calculation
-function handleRoll() {
-  if (isRolling) return;
-  isRolling = true;
+    for (const tile of section.tiles) {
+      const st = window.gameEngine.gameState.tileState[tile.id] || { owner: null, fortifyLevel: 0 };
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'tile';
+      btn.dataset.tileId = tile.id;
 
-  const diceDisplay = document.getElementById('dice-display');
-  const rollBtn = document.getElementById('roll-btn');
-  if (rollBtn) rollBtn.disabled = true;
+      if (st.owner === 1 || st.owner === 2) {
+        const fortLv = Math.max(1, st.fortifyLevel || 1);
+        btn.classList.add(`owned-p${st.owner}`, `fort-${fortLv}`);
+      }
 
-  let count = 0;
-  const interval = setInterval(() => {
-    const tempVal = Math.floor(Math.random() * 3) + 1;
-    if (diceDisplay) diceDisplay.innerText = tempVal;
-    count++;
+      const selectable = turnActionMode === 'fortify'
+        ? window.gameEngine.canFortifyTile(tile.id, activeId)
+        : window.gameEngine.canSelectTile(tile.id, activeId);
 
-    if (count > 8) {
-      clearInterval(interval);
+      if (selectable) btn.classList.add('selectable');
+      else btn.classList.add('locked');
 
-      try {
-        let finalRoll = 1;
-        let landedPos = 1;
+      const isAdjacent = ownedIds.some(ownedId => {
+        const ownedMeta = window.gameEngine.getTileMeta(ownedId);
+        return ownedMeta && Array.isArray(ownedMeta.tile.neighbors) && ownedMeta.tile.neighbors.includes(tile.id);
+      });
 
-        if (window.gameEngine) {
-          finalRoll = window.gameEngine.rollDie();
-          const moveResult = window.gameEngine.movePlayer(finalRoll);
-          landedPos = moveResult.newPosition;
+      const isOpponentTile = st.owner !== null && st.owner !== activeId;
+      let statusText = 'Out of Reach';
+
+      if (turnActionMode === 'fortify') {
+        if (selectable) {
+          statusText = `Fortify -> Lv. ${(st.fortifyLevel || 1) + 1}`;
+        } else if (st.owner === activeId) {
+          statusText = 'Owned (Max Lv. 3)';
+        } else {
+          statusText = st.owner ? `P${st.owner} Tile` : 'Open';
         }
-
-        if (diceDisplay) diceDisplay.innerText = finalRoll;
-
-        updateUI();
-
-        // Show card modal after rolling finishes
-        setTimeout(() => {
-          showCardModal(landedPos);
-        }, 200);
-
-      } catch (err) {
-        console.error('Error during movement step:', err);
-        // Fallback: unlock button if something fails unexpectedly
-        isRolling = false;
-        if (rollBtn) rollBtn.disabled = false;
+      } else if (selectable) {
+        if (isOpponentTile) {
+          statusText = `Contest (P${st.owner} · Lv. ${Math.max(1, st.fortifyLevel || 1)})`;
+        } else {
+          statusText = ownedIds.length === 0 ? 'Starting Tile' : 'Available · Adj';
+        }
+      } else if (section.isGated && !window.gameEngine.isSection6Unlocked(activeId)) {
+        statusText = 'Locked (Need Section Majority)';
+      } else if (st.owner === activeId) {
+        statusText = `Owned (Lv. ${Math.max(1, st.fortifyLevel || 1)})`;
+      } else if (isAdjacent) {
+        statusText = 'Adjacent';
       }
+
+      btn.innerHTML = `
+        <span class="tile-label">${tile.name}</span>
+        <span class="tile-meta">${statusText}</span>
+      `;
+
+      btn.addEventListener('click', () => handleTileClick(tile.id, tile.name));
+      grid.appendChild(btn);
     }
-  }, 75);
+
+    secBlock.appendChild(grid);
+    boardContainer.appendChild(secBlock);
+  }
 }
 
-function getRandomItem(arr) {
-  if (!arr || !Array.isArray(arr) || arr.length === 0) return null;
-  return arr[Math.floor(Math.random() * arr.length)];
-}
+function handleTileClick(tileId, tileName) {
+  const activeId = window.gameEngine.gameState.activePlayerId;
 
-// Display Challenge Card Modal
-function showCardModal(tileIndex) {
-  const challengeObj = challengesData[tileIndex - 1] || challengesData[0];
-
-  let taskText = 'No challenge found for this tile.';
-
-  if (challengeObj && challengeObj.variants && challengeObj.variants[selectedIntensity]) {
-    const variant = challengeObj.variants[selectedIntensity];
-    const taskPool = variant.takeover_challenge || variant.rent_task || [];
-    taskText = getRandomItem(taskPool) || taskText;
+  if (turnActionMode === 'fortify') {
+    if (window.gameEngine.fortifyTileAndEndTurn(tileId, activeId)) {
+      turnActionMode = 'conquer';
+      renderBoard();
+      updateUI();
+    }
+    return;
   }
 
-  const modalTitle = document.getElementById('modal-tile-title');
-  const modalTag = document.getElementById('modal-intensity-tag');
-  const modalText = document.getElementById('modal-task-text');
+  if (!window.gameEngine.canSelectTile(tileId, activeId)) return;
 
-  if (modalTitle) modalTitle.innerText = challengeObj ? challengeObj.tile_name : `Tile #${tileIndex}`;
-  if (modalTag) modalTag.innerText = selectedIntensity.toUpperCase();
-  if (modalText) modalText.innerText = taskText;
+  const st = window.gameEngine.gameState.tileState[tileId];
+  selectedTileId = tileId;
+  isTakeoverMove = st.owner !== null && st.owner !== activeId;
+  pendingIntensity = window.gameEngine.getEffectiveIntensity(tileId);
+  chosenChallengeText = '';
 
-  renderModifierSection();
-
-  const modalOverlay = document.getElementById('card-modal');
-  if (modalOverlay) modalOverlay.classList.add('active');
+  currentOptions = window.cardManager.getTwoOptionsForTile(tileId, tileName, pendingIntensity);
+  openChallengeModal(tileName);
 }
 
-// Render modifier button inside card modal
-function renderModifierSection() {
-  let modBox = document.getElementById('modal-modifier-box');
+function openChallengeModal(tileName) {
+  const activePlayer = window.gameEngine.getActivePlayer();
+  const st = window.gameEngine.gameState.tileState[selectedTileId];
+  const lv = Math.max(1, st?.fortifyLevel || 1);
+  const isFortified = lv >= 2;
 
-  if (!modBox) {
-    const cardContent = document.querySelector('#card-modal .modal-content') || document.getElementById('card-modal');
-    if (!cardContent) return;
+  document.getElementById('modal-tile-title').innerText = tileName;
+  document.getElementById('modal-intensity-tag').innerText = isFortified
+    ? `${pendingIntensity.toUpperCase()} · LV. ${lv} · 2X DURATION`
+    : `${pendingIntensity.toUpperCase()} · LV. 1`;
 
-    const container = document.createElement('div');
-    container.style.margin = '10px 0';
-    container.style.textAlign = 'center';
+  const durationNote = isFortified
+    ? ' Fortified tile: double the time/duration!'
+    : '';
 
-    const modBtn = document.createElement('button');
-    modBtn.type = 'button';
-    modBtn.className = 'btn-secondary';
-    modBtn.innerText = 'Draw Modifier Card';
-    modBtn.style.padding = '6px 12px';
-    modBtn.style.cursor = 'pointer';
-
-    modBox = document.createElement('div');
-    modBox.id = 'modal-modifier-box';
-    modBox.style.marginTop = '8px';
-    modBox.style.fontSize = '0.85em';
-    modBox.style.color = '#ffd700';
-
-    modBtn.addEventListener('click', () => {
-      if (modifiersData && modifiersData.length > 0) {
-        const mod = getRandomItem(modifiersData);
-        modBox.innerText = `Modifier: ${mod.name} — ${mod.description}`;
-      } else {
-        modBox.innerText = 'No modifiers loaded.';
-      }
-    });
-
-    container.appendChild(modBtn);
-    container.appendChild(modBox);
-
-    const closeModalBtn = document.getElementById('close-modal-btn');
-    if (closeModalBtn && closeModalBtn.parentNode) {
-      closeModalBtn.parentNode.insertBefore(container, closeModalBtn);
-    } else {
-      cardContent.appendChild(container);
-    }
+  if (isTakeoverMove) {
+    document.getElementById('modal-direction-text').innerText =
+      `Takeover: choose a challenge, then pay 1 currency to receive it on ${activePlayer.name} or give it for free.${durationNote}`;
   } else {
-    modBox.innerText = '';
+    document.getElementById('modal-direction-text').innerText =
+      `Claiming open territory: your partner performs your chosen challenge on ${activePlayer.name}.${durationNote}`;
+  }
+
+  document.getElementById('choice-a-btn').innerText = currentOptions[0];
+  document.getElementById('choice-b-btn').innerText = currentOptions[1];
+
+  document.getElementById('challenge-options').classList.remove('hidden');
+  document.getElementById('selected-challenge-box').classList.add('hidden');
+  document.getElementById('complete-challenge-btn').classList.add('hidden');
+
+  const swapBtn = document.getElementById('swap-challenge-btn');
+  if (swapBtn) {
+    swapBtn.classList.remove('hidden');
+    swapBtn.disabled = activePlayer.currency < 1;
+  }
+
+  document.getElementById('card-modal')?.classList.add('active');
+}
+
+function handleSwapOptions() {
+  const activePlayer = window.gameEngine.getActivePlayer();
+  if (!window.gameEngine.spendCurrency(activePlayer.id, 1)) return;
+
+  const meta = window.gameEngine.getTileMeta(selectedTileId);
+  currentOptions = window.cardManager.getTwoOptionsForTile(
+    selectedTileId,
+    meta ? meta.tile.name : selectedTileId,
+    pendingIntensity
+  );
+
+  document.getElementById('choice-a-btn').innerText = currentOptions[0];
+  document.getElementById('choice-b-btn').innerText = currentOptions[1];
+  updateUI();
+}
+
+function pickChallengeOption(index) {
+  const activePlayer = window.gameEngine.getActivePlayer();
+  chosenChallengeText = currentOptions[index] || currentOptions[0];
+  document.getElementById('modal-task-text').innerText = chosenChallengeText;
+  document.getElementById('challenge-options').classList.add('hidden');
+  document.getElementById('swap-challenge-btn')?.classList.add('hidden');
+  document.getElementById('selected-challenge-box').classList.remove('hidden');
+
+  const completeBtn = document.getElementById('complete-challenge-btn');
+  if (completeBtn) {
+    completeBtn.classList.remove('hidden');
+    if (isTakeoverMove) {
+      completeBtn.innerText = activePlayer.currency >= 1
+        ? 'Complete Takeover (Give Challenge · 0 Currency)'
+        : 'Complete Takeover (Give Challenge)';
+    } else {
+      completeBtn.innerText = 'Complete Claim (+1 Currency)';
+    }
+  }
+
+  // On a takeover, offer a second button to pay 1 currency and receive the challenge instead
+  let payReceiveBtn = document.getElementById('pay-receive-btn');
+  if (!payReceiveBtn) {
+    payReceiveBtn = document.createElement('button');
+    payReceiveBtn.type = 'button';
+    payReceiveBtn.id = 'pay-receive-btn';
+    payReceiveBtn.className = 'btn-secondary';
+    completeBtn?.parentNode?.insertBefore(payReceiveBtn, completeBtn.nextSibling);
+  }
+
+  if (isTakeoverMove) {
+    payReceiveBtn.classList.remove('hidden');
+    payReceiveBtn.disabled = activePlayer.currency < 1;
+    payReceiveBtn.innerText = 'Pay 1 Currency & Receive Challenge';
+    payReceiveBtn.onclick = () => finalizeChallenge(true);
+  } else {
+    payReceiveBtn.classList.add('hidden');
   }
 }
 
-// Update Player Tokens & Ownership Badges safely
-function updateUI() {
-  if (!window.gameEngine || !window.gameEngine.gameState) return;
+function handleCompleteChallenge() {
+  finalizeChallenge(false);
+}
 
+function finalizeChallenge(paidToReceive) {
+  const activeId = window.gameEngine.gameState.activePlayerId;
+  const ok = window.gameEngine.completeTileConquest(selectedTileId, activeId, paidToReceive);
+  if (!ok) return;
+
+  turnActionMode = 'conquer';
+  closeModal();
+  renderBoard();
+  updateUI();
+}
+
+function closeModal() {
+  selectedTileId = null;
+  document.getElementById('pay-receive-btn')?.classList.add('hidden');
+  document.getElementById('card-modal')?.classList.remove('active');
+}
+
+function updateUI() {
+  const gs = window.gameEngine.gameState;
   const activePlayer = window.gameEngine.getActivePlayer();
   const turnBadge = document.getElementById('turn-badge');
+  const hintEl = document.getElementById('action-hint');
+  const fortifyBar = document.getElementById('fortify-bar');
+  const fortifyBtn = document.getElementById('fortify-mode-btn');
 
   if (turnBadge && activePlayer) {
-    turnBadge.innerText = `${activePlayer.name}'s Turn`;
-  }
-
-  // Safely clear markers
-  document.querySelectorAll('.player-markers').forEach(el => el.innerHTML = '');
-
-  const p1Pos = window.gameEngine.gameState.players[1]?.position || 1;
-  const p2Pos = window.gameEngine.gameState.players[2]?.position || 1;
-
-  // Render P1 Token
-  const p1Box = document.getElementById(`markers-tile-${p1Pos}`);
-  if (p1Box) {
-    const badge = document.createElement('span');
-    badge.className = 'player-token token-p1';
-    badge.innerText = 'P1';
-    p1Box.appendChild(badge);
-  }
-
-  // Render P2 Token
-  const p2Box = document.getElementById(`markers-tile-${p2Pos}`);
-  if (p2Box) {
-    const badge = document.createElement('span');
-    badge.className = 'player-token token-p2';
-    badge.innerText = 'P2';
-    p2Box.appendChild(badge);
-  }
-
-  // Render Ownership Badges
-  const tileOwners = window.gameEngine.gameState.tileOwners || {};
-  for (let tileNum = 1; tileNum <= 18; tileNum++) {
-    const ownerBox = document.getElementById(`owner-tile-${tileNum}`);
-    if (ownerBox) {
-      if (tileOwners[tileNum] === 1) {
-        ownerBox.className = 'owner-badge owned-p1';
-        ownerBox.innerText = 'P1';
-      } else if (tileOwners[tileNum] === 2) {
-        ownerBox.className = 'owner-badge owned-p2';
-        ownerBox.innerText = 'P2';
-      } else {
-        ownerBox.className = 'owner-badge';
-        ownerBox.innerText = '';
-      }
+    turnBadge.className = `turn-badge p${activePlayer.id}-turn`;
+    if (gs.isGameOver) {
+      const winner = gs.players[gs.winnerId];
+      turnBadge.innerText = `${winner ? winner.name : 'Player'} Claims Full-Body Dominion!`;
+    } else {
+      turnBadge.innerText = `${activePlayer.name}'s Turn`;
     }
   }
-}
+
+  for (const pid of [1, 2]) {
+    const p = gs.players[pid];
+    const secs = window.gameEngine.getControlledSections(pid).length;
+    const el = document.getElementById(`p${pid}-stats`);
+    if (el && p) {
+      el.innerText = `${p.name}: ${p.currency} Currency | ${secs}/6 Sections`;
+    }
+  }
+
+  if (hintEl && activePlayer) {
+    if (gs.isGameOver) {
+      hintEl.innerText = 'Campaign complete — all 6 sections controlled.';
+    } else if (turnActionMode === 'fortify') {
+      hintEl.innerText = `${activePlayer.name}: tap one of your Lv. 1 or Lv. 2 tiles to fortify it for 1 currency (ends turn).`;
+    } else {
+      const ownedCount = window.gameEngine.getOwnedTiles(activePlayer.id).length;
+      hintEl.innerText = ownedCount === 0
+        ? `${activePlayer.name}: pick a starting tile in an unlocked section, or fortify an owned tile.`
+        : `${activePlayer.name}: pick an adjacent tile to claim/contest, or fortify an owned tile.`;
+    }
+  }
+
+if (fortifyBar) {
+    fortifyBar.classList.toggle('hidden', Boolean(gs.isGameOver));
+  }
+  }
+  if (fortifyBtn && activePlayer) {
+    const hasFortifiable = window.gameEngine.getOwnedTiles(activePlayer.id).some(
+      id => window.gameEngine.canFortifyTile(id, activePlayer.id)
+    );
+    fortifyBtn.disabled = !hasFortifiable;
+    fortifyBtn.innerText = turnActionMode === 'fortify' ? 'Back to Tile Conquest' : 'Fortify Tile (1 Currency)';
+  }
+
+  renderBoard();

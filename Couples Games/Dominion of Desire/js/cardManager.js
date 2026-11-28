@@ -1,114 +1,58 @@
 class CardManager {
   constructor() {
     this.challenges = [];
-    this.modifiers = [];
   }
 
   async loadData() {
     try {
-      const [challengesRes, modifiersRes] = await Promise.all([
-        fetch('assets/data/challenges.json'),
-        fetch('assets/data/modifiers.json')
-      ]);
-
-      if (challengesRes.ok) {
-        const rawChallenges = await challengesRes.json();
-        this.challenges = Array.isArray(rawChallenges) 
-          ? rawChallenges 
-          : (rawChallenges.challenges || rawChallenges.cards || []);
-      }
-
-      if (modifiersRes.ok) {
-        const rawModifiers = await modifiersRes.json();
-        if (Array.isArray(rawModifiers)) {
-          this.modifiers = rawModifiers;
-        } else if (rawModifiers && Array.isArray(rawModifiers.modifiers)) {
-          this.modifiers = rawModifiers.modifiers;
-        } else if (rawModifiers && Array.isArray(rawModifiers.cards)) {
-          this.modifiers = rawModifiers.cards;
-        } else {
-          this.modifiers = [];
-        }
+      const res = await fetch('assets/data/challenges.json');
+      if (res.ok) {
+        const raw = await res.json();
+        this.challenges = Array.isArray(raw) ? raw : (raw.challenges || raw.cards || []);
       }
     } catch (err) {
-      console.error("Error loading card JSON data:", err);
+      console.error('Error loading challenges.json:', err);
     }
   }
 
-  getChallengeForTile(rawTileId, intensitySetting) {
-    if (!this.challenges || this.challenges.length === 0) {
-      return null;
-    }
-
-    const num = String(rawTileId).replace('tile_', '');
-    const formattedId = `tile_${num}`;
-
-    // Look for match by formatted tile_id or raw index
-    const tileData = this.challenges.find(item => 
-      item && (String(item.tile_id) === formattedId || String(item.tile_id) === num)
+  getTwoOptionsForTile(tileId, tileName, intensity) {
+    const tileObj = this.challenges.find(
+      item => item && (item.tile_id === tileId || item.tile_name === tileName)
     );
 
-    if (!tileData) {
-      return null;
-    }
+    const tiers = ['romantic', 'sensual', 'erotic'];
+    let pool = [];
 
-    let variant = null;
-    if (tileData.variants) {
-      variant = tileData.variants[intensitySetting] || 
-                tileData.variants['romantic'] || 
-                tileData.variants['sensual'] || 
-                tileData.variants['tease'] || 
-                tileData.variants['erotic'] || 
-                Object.values(tileData.variants)[0];
-    } else {
-      variant = tileData;
-    }
-
-    const getRandomItem = (dataField, fallback) => {
-      if (Array.isArray(dataField) && dataField.length > 0) {
-        const index = Math.floor(Math.random() * dataField.length);
-        return dataField[index];
+    if (tileObj && tileObj.variants) {
+      const order = [intensity, ...tiers.filter(t => t !== intensity)];
+      for (const tier of order) {
+        const v = tileObj.variants[tier];
+        const list = v?.takeover_challenge || v?.rent_task || [];
+        if (Array.isArray(list) && list.length > 0) {
+          pool = list;
+          break;
+        }
       }
-      return typeof dataField === 'string' ? dataField : fallback;
-    };
-
-    const selectedRentTask = getRandomItem(
-      variant?.rent_task, 
-      'Perform 30 seconds of gentle touch.'
-    );
-
-    const selectedTakeoverChallenge = getRandomItem(
-      variant?.takeover_challenge, 
-      'Perform a challenge to claim this territory.'
-    );
-
-    return {
-      tile_name: tileData.tile_name || tileData.name || null,
-      rent_task: selectedRentTask,
-      takeover_challenge: selectedTakeoverChallenge
-    };
-  }
-
-  drawRandomModifier() {
-    const validModifiers = Array.isArray(this.modifiers) 
-      ? this.modifiers.filter(Boolean) 
-      : [];
-
-    if (validModifiers.length === 0) {
-      return {
-        name: 'Slow Motion',
-        description: 'Perform the action with extra slow movements and focus.',
-        title: 'Slow Motion'
-      };
     }
 
-    const randomIndex = Math.floor(Math.random() * validModifiers.length);
-    const mod = validModifiers[randomIndex];
+    if (pool.length === 0) {
+      return [
+        `Give ${tileName} slow, attentive touch for 45 seconds.`,
+        `Trace ${tileName} gently with your fingertips and lips for 45 seconds.`
+      ];
+    }
 
-    return {
-      name: mod?.name || mod?.title || mod?.modifier_name || 'Modifier Card',
-      description: mod?.description || mod?.task || mod?.text || 'Perform the current task with an added twist!'
-    };
+    if (pool.length === 1) {
+      return [pool[0], `Slow down and linger on ${tileName}: ${pool[0]}`];
+    }
+
+    const idx1 = Math.floor(Math.random() * pool.length);
+    let idx2 = Math.floor(Math.random() * pool.length);
+    while (idx2 === idx1) {
+      idx2 = Math.floor(Math.random() * pool.length);
+    }
+
+    return [pool[idx1], pool[idx2]];
   }
 }
 

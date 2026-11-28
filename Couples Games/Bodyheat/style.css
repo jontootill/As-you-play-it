@@ -1,33 +1,52 @@
 :root {
-  --bg: #0f0a0c;
-  --card: #1c1216;
-  --accent: #e83e6d;
-  --accent-soft: #ff6b9d;
-  --text: #f8e9ee;
-  --muted: #b89aa5;
-  --danger: #f87171;
+  --bg: #161015;
+  --card: #221720;
+  --well: #181017;
+  --accent: #9e2a4b;
+  --accent-soft: #d98a6c;
+  --accent-bright: #b83359;
+  --text: #f7eef2;
+  --muted: #cbb3be;
+  --danger: #e57373;
+  --border: rgba(201, 138, 107, 0.34);
 }
 
-* {
+html {
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background: var(--bg);
+  font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(158, 42, 75, 0.22) 0%, transparent 58%),
+    var(--bg);
   color: var(--text);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: 20px;
+  line-height: 1.45;
 }
 
 /* ===== SCREENS ===== */
 .screen {
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
+  background: rgba(34, 23, 32, 0.9);
+  border: 1px solid var(--accent-soft);
+  outline: 1px solid var(--border);
+  outline-offset: -6px;
+  border-radius: 4px;
+  padding: 26px 22px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.58);
 }
 
 .hidden {
@@ -46,30 +65,38 @@ body {
 /* ===== SETUP ===== */
 #setup-screen {
   text-align: center;
-  padding-top: 60px;
+  padding-top: 32px;
 }
 
 h1 {
-  font-size: 2.8rem;
-  letter-spacing: -1px;
+  font-family: "Cinzel", Palatino, Georgia, serif;
+  font-size: 2.3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin-bottom: 8px;
+  color: var(--text);
 }
 
 .subtitle {
-  color: var(--muted);
-  margin-bottom: 40px;
+  color: var(--accent-soft);
+  font-style: italic;
+  font-size: 1.05rem;
+  margin-bottom: 32px;
 }
 
 .name-inputs {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .name-inputs label {
   display: block;
+  font-family: "Cinzel", Georgia, serif;
   font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 6px;
   text-align: left;
@@ -78,53 +105,74 @@ h1 {
 .name-inputs input {
   width: 100%;
   padding: 14px 16px;
-  border-radius: 12px;
-  border: 1px solid #3a2a30;
-  background: var(--card);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--well);
   color: var(--text);
+  font-family: inherit;
   font-size: 1.1rem;
 }
 
 .name-inputs input:focus {
   outline: none;
-  border-color: var(--accent);
+  border-color: var(--accent-soft);
 }
 
 /* ===== BUTTONS ===== */
 .primary-btn {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 16px 32px;
-  border-radius: 14px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  background: linear-gradient(180deg, #b53258 0%, var(--accent) 100%);
+  color: var(--text);
+  border: 1px solid var(--accent-soft);
+  outline: 1px solid rgba(201, 138, 107, 0.25);
+  outline-offset: -4px;
+  padding: 16px 28px;
+  border-radius: 4px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   cursor: pointer;
   width: 100%;
-  transition: transform 0.15s;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(180deg, #cc3c65 0%, var(--accent-bright) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.65);
 }
 
 .primary-btn:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
 .secondary-btn {
   background: transparent;
   color: var(--danger);
   border: 1px solid var(--danger);
-  padding: 14px 28px;
-  border-radius: 14px;
-  font-size: 1rem;
+  padding: 13px 24px;
+  border-radius: 4px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
   width: 100%;
   margin-top: 12px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(229, 115, 115, 0.14);
 }
 
 /* ===== HEADER ===== */
 header {
   margin-bottom: 20px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #2a1c22;
+  border-bottom: 1px solid var(--border);
 }
 
 .players {
@@ -132,63 +180,73 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 12px;
+  gap: 10px;
 }
 
 .player-heat {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 1rem;
+  font-size: 1.02rem;
   padding: 6px 10px;
-  border-radius: 12px;
-  transition: background 0.2s;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
 }
 
 .player-heat.active-turn {
-  background: #2a1a22;
+  background: var(--well);
+  border-color: var(--border);
 }
 
 .heat-badge {
-  background: #2a1a22;
-  color: #f9a8d4;
+  background: var(--well);
+  color: var(--accent-soft);
+  border: 1px solid var(--border);
+  font-family: "Cinzel", Georgia, serif;
   font-weight: 700;
-  font-size: 0.85rem;
-  padding: 5px 12px;
-  border-radius: 20px;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 4px;
   text-align: center;
   text-transform: capitalize;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.05em;
   min-width: auto;
 }
 
-.heat-badge.heat-low  { background: #3b1c2e; color: #f9a8d4; }
-.heat-badge.heat-mid  { background: #4a1528; color: #fb7185; }
-.heat-badge.heat-high { background: #5c0a1f; color: #e11d48; }
+.heat-badge.heat-low  { background: #2c1724; color: #e8b4c4; border-color: rgba(232, 180, 196, 0.35); }
+.heat-badge.heat-mid  { background: #3d1626; color: #f29bb2; border-color: rgba(242, 155, 178, 0.45); }
+.heat-badge.heat-high { background: #521122; color: #ff8fa8; border-color: rgba(255, 143, 168, 0.55); }
 
 .vs {
-  opacity: 0.4;
-  font-size: 1.1rem;
+  opacity: 0.65;
+  font-family: "Cinzel", Georgia, serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--accent-soft);
 }
 
 /* ===== TURN INDICATOR ===== */
 .turn-indicator {
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  font-style: italic;
   color: var(--accent-soft);
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   font-weight: 500;
 }
 
 /* ===== BODY PART GRID ===== */
 #select-phase h2 {
-  font-size: 1.4rem;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
   margin-bottom: 6px;
 }
 
 .hint {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   margin-bottom: 20px;
 }
 
@@ -199,19 +257,20 @@ header {
 }
 
 .part-btn {
-  background: var(--card);
-  border: 1px solid #3a2a30;
+  background: var(--well);
+  border: 1px solid var(--border);
   color: var(--text);
   padding: 18px 12px;
-  border-radius: 14px;
-  font-size: 0.95rem;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1.02rem;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.15s ease;
 }
 
 .part-btn:hover:not(:disabled) {
-  border-color: var(--accent);
-  background: #2a1a22;
+  border-color: var(--accent-soft);
+  background: #2b1a28;
 }
 
 .part-btn.used {
@@ -221,7 +280,9 @@ header {
 
 /* ===== CHALLENGE CHOICE ===== */
 #choice-phase h2 {
+  font-family: "Cinzel", Georgia, serif;
   font-size: 1.25rem;
+  letter-spacing: 0.04em;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -233,42 +294,45 @@ header {
 }
 
 .challenge-card {
-  background: var(--card);
-  border: 1px solid #3a2a30;
+  background: var(--well);
+  border: 1px solid var(--border);
   color: var(--text);
-  padding: 20px;
-  border-radius: 16px;
-  font-size: 1.05rem;
+  padding: 18px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1.08rem;
   line-height: 1.45;
   text-align: left;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.15s ease;
 }
 
 .challenge-card:hover {
-  border-color: var(--accent);
-  background: #2a1a22;
+  border-color: var(--accent-soft);
+  background: #2b1a28;
 }
 
 /* ===== ACTIVE CHALLENGE ===== */
 .active-card {
-  background: var(--card);
-  border-radius: 20px;
-  padding: 28px 24px;
-  margin-bottom: 24px;
-  border: 1px solid #3a2a30;
+  background: var(--well);
+  border-radius: 4px;
+  padding: 26px 22px;
+  margin-bottom: 22px;
+  border: 1px solid var(--accent-soft);
+  box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.55);
 }
 
 .for-label {
+  font-family: "Cinzel", Georgia, serif;
   font-size: 0.85rem;
   color: var(--accent-soft);
   margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.08em;
 }
 
 #active-challenge-text {
-  font-size: 1.25rem;
+  font-size: 1.28rem;
   line-height: 1.5;
 }
 
@@ -280,19 +344,18 @@ header {
 /* ===== LOGO / TITLE ===== */
 .logo {
   text-decoration: none;
-  background: linear-gradient(135deg, #ff6b9d, #e83e6d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent-soft);
+  font-family: "Cinzel", Palatino, Georgia, serif;
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: 0.06em;
 }
 
 .logo:hover {
-  opacity: 0.85;
+  color: var(--text);
 }
 
 .logo-header {
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   margin: 0 0 16px 0;
   text-align: center;
 }
